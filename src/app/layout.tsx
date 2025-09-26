@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { ThemeProvider } from "@/contexts/theme-context";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -27,8 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/@github/mona-sans@1.0.0/index.css"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full`}
+        className={`${jetBrainsMono.variable} antialiased w-full`}
+        style={{ fontFamily: 'Mona Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif' }}
       >
         <ThemeProvider>
           <Navigation />
