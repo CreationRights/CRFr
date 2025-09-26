@@ -2,7 +2,7 @@
 
 A modern, responsive website for Creation Rights - empowering digital creators with comprehensive protection and monetization tools.
 
-## 🚀 Features
+## Features
 
 - **Modern Next.js 15** with App Router and TypeScript
 - **Tailwind CSS v4** for styling with custom theme system
@@ -13,7 +13,7 @@ A modern, responsive website for Creation Rights - empowering digital creators w
 - **Full Static Generation** for optimal performance
 - **Comprehensive SEO** with proper meta tags
 
-## 🎨 Design System
+## Design System
 
 ### Theme Support
 - **Light Mode**: Clean, professional white theme
@@ -31,7 +31,7 @@ A modern, responsive website for Creation Rights - empowering digital creators w
 - **Accessible Contrast**: WCAG compliant color combinations
 - **Consistent Palette**: Unified color system across all components
 
-## 📁 Site Structure
+## Site Structure
 
 ### Main Navigation
 ```
@@ -70,7 +70,7 @@ A modern, responsive website for Creation Rights - empowering digital creators w
 - **Terms of Service** - Terms and conditions
 - **Cookie Policy** - Cookie usage information
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 src/
@@ -125,7 +125,7 @@ src/
     └── utils.ts                  # Utility functions
 ```
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Core Framework
 - **Next.js 15** - React framework with App Router
@@ -144,7 +144,7 @@ src/
 - **PostCSS** - CSS processing
 - **Turbopack** - Fast bundler for development
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
@@ -186,7 +186,7 @@ npm run build
 npm run start
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 The site is fully responsive with breakpoints:
 - **Mobile**: 320px - 768px
@@ -194,7 +194,7 @@ The site is fully responsive with breakpoints:
 - **Desktop**: 1024px+
 - **Large Desktop**: 1440px+
 
-## ♿ Accessibility
+## Accessibility
 
 - **WCAG 2.1 AA** compliant color contrast
 - **Keyboard Navigation** support
@@ -202,7 +202,7 @@ The site is fully responsive with breakpoints:
 - **Focus Management** for interactive elements
 - **Semantic HTML** structure
 
-## 🎯 Performance
+## Performance
 
 - **Static Generation** for all pages
 - **Optimized Images** with Next.js Image component
@@ -210,7 +210,7 @@ The site is fully responsive with breakpoints:
 - **Bundle Splitting** for efficient loading
 - **Core Web Vitals** optimized
 
-## 🔧 Customization
+## Customization
 
 ### Adding New Pages
 1. Create page file in appropriate `src/app/` directory
@@ -228,11 +228,11 @@ The site is fully responsive with breakpoints:
 - Use theme-aware classes (`bg-card`, `text-foreground`, etc.)
 - Implement responsive design with Tailwind breakpoints
 
-## 📄 License
+## License
 
 This project is proprietary and confidential to Creation Rights.
 
-## 🤝 Contributing
+## Contributing
 
 This is a private repository. For internal development guidelines, please refer to the team documentation.
 
