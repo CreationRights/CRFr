@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn, UserPlus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeSwitcher from "@/components/ui/theme-switcher";
+import { NavSection, NavContainer, NavContent } from "@/components/ui/nav-section";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -60,9 +62,9 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="w-full px-6 sm:px-16 lg:px-24">
-        <div className="flex h-16 items-center justify-between">
+    <NavSection>
+      <NavContainer>
+        <NavContent className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-xl font-bold">Creation Rights</div>
@@ -105,22 +107,23 @@ const Navigation = () => {
             <ThemeSwitcher />
             <Link
               href="/login"
-              className="transition-colors hover:text-muted-foreground"
+              className="inline-flex h-10 w-10 items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:bg-white/10"
+              aria-label="Login"
             >
-              Login
+              <LogIn className="h-5 w-5" />
             </Link>
             <Link
               href="/signup"
-              className="rounded-full border border-border px-4 py-2 transition-all hover:bg-muted"
+              className="inline-flex h-10 w-10 items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:bg-white/10"
+              aria-label="Sign Up"
             >
-              Sign Up
+              <UserPlus className="h-5 w-5" />
             </Link>
-            <Link
-              href="/demo"
-              className="rounded-full border border-border px-4 py-2 text-sm transition-all hover:bg-muted"
-            >
-              Request Demo
-            </Link>
+            <Button variant="shimmer" asChild>
+              <Link href="/demo">
+                Request Demo
+              </Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -130,12 +133,12 @@ const Navigation = () => {
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
-        </div>
+        </NavContent>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t border-border py-4">
-            <div className="space-y-4">
+            <div className="md:hidden border-t border-border py-4">
+              <div className="space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.title}>
                   <div className="font-medium mb-2">{item.title}</div>
@@ -179,19 +182,19 @@ const Navigation = () => {
                 >
                   Sign Up
                 </Link>
-                <Link
-                  href="/demo"
-                  className="block transition-colors hover:text-muted-foreground"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Request Demo
-                </Link>
+                <div onClick={() => setIsOpen(false)}>
+                  <Button variant="shimmer" className="w-full" asChild>
+                    <Link href="/demo">
+                      Request Demo
+                    </Link>
+                  </Button>
+                </div>
+                </div>
               </div>
             </div>
-          </div>
         )}
-      </div>
-    </nav>
+      </NavContainer>
+    </NavSection>
   );
 };
 
@@ -207,11 +210,11 @@ function ListItem({
         <Link
           href={href}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+            "block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors text-white hover:bg-white/10 focus:bg-white/10"
           )}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="line-clamp-2 text-sm leading-snug text-white/70">
             {children}
           </p>
         </Link>

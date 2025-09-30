@@ -1,43 +1,71 @@
-import BlurIn from "@/components/magicui/blur-in";
-import TypingAnimation from "@/components/magicui/typing-animation";
-import { ArrowRight, Shield, Users, Zap, Rocket } from "lucide-react";
+import { HeroSection, HeroContainer, HeroContent } from "@/components/ui/hero-section";
+import InteractiveGrid from "@/components/ui/interactive-grid";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight, Shield, Users, Zap } from "lucide-react";
 
 export default function Home() {
+  // Custom images from public/grid-images folder
+  const gridImages = [
+    "/grid-images/hero-01.jpg",
+    "/grid-images/hero-02.jpg",
+    "/grid-images/hero-03.jpg",
+    "/grid-images/hero-04.jpg",
+    "/grid-images/hero-05.jpg",
+    "/grid-images/hero-06.jpg",
+    "/grid-images/hero-07.jpg",
+    "/grid-images/hero-08.jpg",
+    "/grid-images/hero-09.jpg",
+    "/grid-images/hero-10.jpg",
+    "/grid-images/hero-11.jpg",
+    "/grid-images/hero-12.jpg",
+    "/grid-images/hero-13.jpg",
+    "/grid-images/hero-14.jpg",
+    "/grid-images/hero-15.jpg",
+    "/grid-images/hero-16.jpg",
+    "/grid-images/hero-17.jpg",
+    "/grid-images/hero-18.jpg",
+    "/grid-images/hero-19.jpg",
+    "/grid-images/hero-20.jpg",
+  ];
+
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-6 py-24 sm:px-16 lg:px-24">
-        <div className="relative w-full">
-          <div className="text-center">
-            <div className="mb-8 flex items-center justify-center gap-2">
-              <Rocket className="h-5 w-5" />
-              <span className="text-sm font-medium">Empowering Digital Creators</span>
-            </div>
+      <HeroSection className="relative overflow-hidden">
+        <InteractiveGrid images={gridImages} />
+        <HeroContainer className="relative h-full flex flex-col justify-between z-10">
+          <div className="text-left space-y-6">
+            <p className="text-2xl font-thin leading-relaxed uppercase md:text-3xl lg:text-4xl">
+              Protect Your Work,<br />
+              Track Your Rights,<br />
+              Get Paid Automatically
+            </p>
             
-            <BlurIn
-              word="Creation Rights"
-              className="mb-8"
-            />
-            
-            <TypingAnimation
-              text="Protecting your creative work in the digital age"
-              className="mb-12 text-xl md:text-2xl"
-              duration={100}
-            />
-            
-            <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-              <button className="group relative rounded-full border border-border px-8 py-3 transition-all hover:bg-muted">
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </button>
+            <div className="space-y-4">
+              <p className="text-lg leading-relaxed max-w-2xl md:text-xl normal-case">
+                Stop losing money to broken royalty systems. Start earning from AI licensing, real time tracking, and automatic revenue distribution that actually works.
+              </p>
               
-              <button className="rounded-full border px-8 py-3 transition-all">
-                Learn More
-              </button>
+              <div>
+                <Button variant="shimmer" className="h-12 px-8 text-base font-medium" asChild>
+                  <Link href="/demo">
+                    Book Your Live Demo
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+          <HeroContent className="text-left space-y-4">
+                  <p className="text-sm leading-relaxed max-w-3xl md:text-base opacity-90">
+                    Powered by patented dynamic metadata that travels with your content across the internet
+                  </p>
+                  <h1 className="text-5xl font-bold leading-tight uppercase md:text-7xl lg:text-8xl">
+                    Your&nbsp;Art. Your&nbsp;Rights. Your&nbsp;Revenue.
+                  </h1>
+          </HeroContent>
+        </HeroContainer>
+      </HeroSection>
 
       {/* Features Section */}
       <section className="px-6 py-24 sm:px-16 lg:px-24">

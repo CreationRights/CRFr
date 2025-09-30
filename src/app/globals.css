@@ -45,6 +45,7 @@
   
   /* Magic UI Animations */
   --animation-gradient: gradient 8s linear infinite;
+  --animation-shimmer: shimmer 3s linear infinite;
   
   /* Navigation Menu Animations */
   --animation-fade-in: fade-in 200ms ease-out;
@@ -133,6 +134,15 @@
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
 html,
 body {
   width: 100%;
@@ -162,4 +172,61 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--foreground);
+}
+
+
+/* Hero Section Base Styles */
+.hero-section {
+  height: 90vh;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 0;
+}
+
+.hero-container {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.hero-content {
+  width: 100%;
+}
+
+/* Navigation Section Base Styles */
+.nav-section {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid #333333;
+  background-color: #000000;
+  color: #ffffff;
+  backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.nav-content {
+  width: 100%;
 }

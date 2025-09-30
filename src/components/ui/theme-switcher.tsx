@@ -15,11 +15,10 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
     <button
       onClick={toggleTheme}
       className={cn(
-        "relative inline-flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 hover:scale-110",
-        "border border-border",
-        "bg-card",
-        "hover:bg-muted",
-        "focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2 focus:ring-offset-background",
+        "relative inline-flex h-10 w-10 items-center justify-center transition-all duration-300 hover:scale-110",
+        "bg-transparent text-white",
+        "hover:bg-white/10",
+        "focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black",
         className
       )}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
