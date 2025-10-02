@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, LogIn, UserPlus } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -14,13 +15,24 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+
+interface NavigationItem {
+  name: string;
+  href: string;
+  description: string;
+  category?: string;
+}
+
+interface NavigationSection {
+  title: string;
+  items: NavigationItem[];
+}
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navigationItems = [
+  const navigationItems: NavigationSection[] = [
     {
       title: "Solutions",
       items: [
@@ -51,9 +63,51 @@ const Navigation = () => {
       ]
     },
     {
+      title: "Use Cases",
+      items: [
+        // Arts & Culture
+        { name: "Art", href: "/use-cases/art", description: "Digital rights for artists and art creators", category: "Arts & Culture" },
+        { name: "Architecture", href: "/use-cases/architecture", description: "Protecting architectural designs and concepts", category: "Arts & Culture" },
+        { name: "Galleries", href: "/use-cases/galleries", description: "Gallery and exhibition rights management", category: "Arts & Culture" },
+        { name: "Creative Spaces", href: "/use-cases/creative-spaces", description: "Rights management for creative venues", category: "Arts & Culture" },
+        { name: "Museums", href: "/use-cases/museums", description: "Museum collection and exhibition protection", category: "Arts & Culture" },
+        
+        // Media & Entertainment
+        { name: "Film", href: "/use-cases/film", description: "Film production and distribution rights", category: "Media & Entertainment" },
+        { name: "TV", href: "/use-cases/tv", description: "Television content and broadcast rights", category: "Media & Entertainment" },
+        { name: "Music", href: "/use-cases/music", description: "Music rights and royalty management", category: "Media & Entertainment" },
+        { name: "Video Games", href: "/use-cases/video-games", description: "Gaming content and asset protection", category: "Media & Entertainment" },
+        { name: "Journalism", href: "/use-cases/journalism", description: "News and editorial content rights", category: "Media & Entertainment" },
+        { name: "Authors", href: "/use-cases/authors", description: "Book and literary content protection", category: "Media & Entertainment" },
+        
+        // Fashion and Lifestyle
+        { name: "Fashion", href: "/use-cases/fashion", description: "Fashion design and brand protection", category: "Fashion and Lifestyle" },
+        { name: "Beauty", href: "/use-cases/beauty", description: "Beauty content and brand rights", category: "Fashion and Lifestyle" },
+        { name: "Models", href: "/use-cases/models", description: "Model portfolio and image rights", category: "Fashion and Lifestyle" },
+        { name: "Cuisine", href: "/use-cases/cuisine", description: "Culinary content and recipe protection", category: "Fashion and Lifestyle" },
+        { name: "Hospitality", href: "/use-cases/hospitality", description: "Hotel and venue content rights", category: "Fashion and Lifestyle" },
+        
+        // Creative Industries
+        { name: "Content Creators", href: "/use-cases/content-creators", description: "Social media and digital content rights", category: "Creative Industries" },
+        { name: "Photography", href: "/use-cases/photography", description: "Photo licensing and usage rights", category: "Creative Industries" },
+        { name: "Design", href: "/use-cases/design", description: "Graphic and product design protection", category: "Creative Industries" },
+        { name: "Advertising", href: "/use-cases/advertising", description: "Ad campaign and creative asset rights", category: "Creative Industries" },
+        { name: "Agency", href: "/use-cases/agency", description: "Creative agency rights management", category: "Creative Industries" },
+        { name: "Auction House", href: "/use-cases/auction-house", description: "Art auction and valuation rights", category: "Creative Industries" },
+        
+        // Sports & NIL
+        { name: "Sports", href: "/use-cases/sports", description: "Sports content and athlete rights", category: "Sports & NIL" },
+        { name: "NIL", href: "/use-cases/nil", description: "Name, Image, and Likeness protection", category: "Sports & NIL" },
+        
+        // Technology
+        { name: "Online Safety", href: "/use-cases/online-safety", description: "Digital safety and content protection", category: "Technology" },
+      ]
+    },
+    {
       title: "Company",
       items: [
         { name: "About Us", href: "/company/about", description: "Our mission and team" },
+        { name: "Partners", href: "/company/partners", description: "Our ecosystem of partners" },
         { name: "Careers", href: "/company/careers", description: "Join our growing team" },
         { name: "Press", href: "/company/press", description: "Media resources and press releases" },
         { name: "Contact", href: "/company/contact", description: "Get in touch with us" },
@@ -65,10 +119,16 @@ const Navigation = () => {
     <NavSection>
       <NavContainer>
         <NavContent className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-xl font-bold">Creation Rights</div>
-          </Link>
+                 {/* Logo */}
+                 <Link href="/" className="flex items-center">
+                   <Image 
+                     src="/creation-rights logo landscape white.svg" 
+                     alt="Creation Rights" 
+                     width={200}
+                     height={50}
+                     className="w-[12.5rem] h-auto"
+                   />
+                 </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-2">
@@ -77,27 +137,131 @@ const Navigation = () => {
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.title}>
                     <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        {item.items.map((subItem) => (
-                          <ListItem
-                            key={subItem.name}
-                            title={subItem.name}
-                            href={subItem.href}
-                          >
-                            {subItem.description}
-                          </ListItem>
-                        ))}
-                      </ul>
+                    <NavigationMenuContent className={item.title === "Use Cases" ? "!w-screen !fixed !left-0 !top-16 !transform-none" : ""}>
+                      {item.title === "Use Cases" ? (
+                        <div className="p-6 bg-black/95 backdrop-blur-sm border border-white/10">
+                          <div className="max-w-7xl mx-auto">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+                            {/* Arts & Culture */}
+                            <div>
+                              <h3 className="font-semibold text-white mb-4">Arts & Culture</h3>
+                              <ul className="space-y-2">
+                                {item.items.filter(subItem => subItem.category === "Arts & Culture").map((subItem) => (
+                                  <li key={subItem.name}>
+                                    <Link
+                                      href={subItem.href}
+                                      className="block text-sm text-white/70 hover:text-white transition-colors"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            
+                            {/* Media & Entertainment */}
+                            <div>
+                              <h3 className="font-semibold text-white mb-4">Media & Entertainment</h3>
+                              <ul className="space-y-2">
+                                {item.items.filter(subItem => subItem.category === "Media & Entertainment").map((subItem) => (
+                                  <li key={subItem.name}>
+                                    <Link
+                                      href={subItem.href}
+                                      className="block text-sm text-white/70 hover:text-white transition-colors"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            
+                            {/* Fashion and Lifestyle */}
+                            <div>
+                              <h3 className="font-semibold text-white mb-4">Fashion & Lifestyle</h3>
+                              <ul className="space-y-2">
+                                {item.items.filter(subItem => subItem.category === "Fashion and Lifestyle").map((subItem) => (
+                                  <li key={subItem.name}>
+                                    <Link
+                                      href={subItem.href}
+                                      className="block text-sm text-white/70 hover:text-white transition-colors"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            
+                            {/* Technology */}
+                            <div>
+                              <h3 className="font-semibold text-white mb-4">Technology</h3>
+                              <ul className="space-y-2">
+                                {item.items.filter(subItem => subItem.category === "Technology").map((subItem) => (
+                                  <li key={subItem.name}>
+                                    <Link
+                                      href={subItem.href}
+                                      className="block text-sm text-white/70 hover:text-white transition-colors"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            
+                            {/* Creative Industries */}
+                            <div>
+                              <h3 className="font-semibold text-white mb-4">Creative Industries</h3>
+                              <ul className="space-y-2">
+                                {item.items.filter(subItem => subItem.category === "Creative Industries").map((subItem) => (
+                                  <li key={subItem.name}>
+                                    <Link
+                                      href={subItem.href}
+                                      className="block text-sm text-white/70 hover:text-white transition-colors"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            
+                            {/* Sports & NIL */}
+                            <div>
+                              <h3 className="font-semibold text-white mb-4">Sports & NIL</h3>
+                              <ul className="space-y-2">
+                                {item.items.filter(subItem => subItem.category === "Sports & NIL").map((subItem) => (
+                                  <li key={subItem.name}>
+                                    <Link
+                                      href={subItem.href}
+                                      className="block text-sm text-white/70 hover:text-white transition-colors"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      ) : (
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                          {item.items.map((subItem) => (
+                            <ListItem
+                              key={subItem.name}
+                              title={subItem.name}
+                              href={subItem.href}
+                            >
+                              {subItem.description}
+                            </ListItem>
+                          ))}
+                        </ul>
+                      )}
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                 ))}
-                
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="/use-cases">Use Cases</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
@@ -143,26 +307,125 @@ const Navigation = () => {
                 <div key={item.title}>
                   <div className="font-medium mb-2">{item.title}</div>
                   <div className="ml-4 space-y-2">
-                    {item.items?.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block text-sm transition-colors hover:text-muted-foreground"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                    {item.title === "Use Cases" ? (
+                      <div className="space-y-4">
+                        {/* Arts & Culture */}
+                        <div>
+                          <div className="text-sm font-medium text-muted-foreground mb-2">Arts & Culture</div>
+                          <div className="ml-2 space-y-1">
+                            {item.items.filter(subItem => subItem.category === "Arts & Culture").map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block text-sm transition-colors hover:text-muted-foreground"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Media & Entertainment */}
+                        <div>
+                          <div className="text-sm font-medium text-muted-foreground mb-2">Media & Entertainment</div>
+                          <div className="ml-2 space-y-1">
+                            {item.items.filter(subItem => subItem.category === "Media & Entertainment").map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block text-sm transition-colors hover:text-muted-foreground"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Fashion and Lifestyle */}
+                        <div>
+                          <div className="text-sm font-medium text-muted-foreground mb-2">Fashion & Lifestyle</div>
+                          <div className="ml-2 space-y-1">
+                            {item.items.filter(subItem => subItem.category === "Fashion and Lifestyle").map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block text-sm transition-colors hover:text-muted-foreground"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Technology */}
+                        <div>
+                          <div className="text-sm font-medium text-muted-foreground mb-2">Technology</div>
+                          <div className="ml-2 space-y-1">
+                            {item.items.filter(subItem => subItem.category === "Technology").map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block text-sm transition-colors hover:text-muted-foreground"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Creative Industries */}
+                        <div>
+                          <div className="text-sm font-medium text-muted-foreground mb-2">Creative Industries</div>
+                          <div className="ml-2 space-y-1">
+                            {item.items.filter(subItem => subItem.category === "Creative Industries").map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block text-sm transition-colors hover:text-muted-foreground"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Sports & NIL */}
+                        <div>
+                          <div className="text-sm font-medium text-muted-foreground mb-2">Sports & NIL</div>
+                          <div className="ml-2 space-y-1">
+                            {item.items.filter(subItem => subItem.category === "Sports & NIL").map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block text-sm transition-colors hover:text-muted-foreground"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      item.items?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block text-sm transition-colors hover:text-muted-foreground"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))
+                    )}
                   </div>
                 </div>
               ))}
-              <Link
-                href="/use-cases"
-                className="block font-medium transition-colors hover:text-muted-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Use Cases
-              </Link>
               <div className="border-t border-border pt-4 space-y-2">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm font-medium">Theme</span>

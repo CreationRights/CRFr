@@ -1,43 +1,84 @@
 import { PageLayout, PageHeader, PageSection } from "@/components/ui/page-layout";
-import { Camera, Music, Palette, Video, BookOpen, Gamepad2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { 
+  Palette, Video, Shirt, Shield, Trophy, Users, Fingerprint, Code
+} from "lucide-react";
 
 export default function UseCasesPage() {
-  const useCases = [
+  const categories = [
     {
-      icon: Camera,
-      title: "Photography",
-      description: "Protect your photographs from unauthorized use and monetize your portfolio through smart licensing.",
-      features: ["Watermark automation", "Print licensing", "Stock photo protection", "Social media monitoring"]
-    },
-    {
-      icon: Music,
-      title: "Music & Audio",
-      description: "Safeguard your musical creations and ensure proper attribution and royalties.",
-      features: ["Audio fingerprinting", "Streaming royalties", "Cover song detection", "Sync licensing"]
-    },
-    {
+      title: "Arts & Culture",
+      description: "Protecting and empowering traditional and digital artists",
       icon: Palette,
-      title: "Digital Art",
-      description: "Protect your digital artwork and illustrations from theft and unauthorized reproduction.",
-      features: ["NFT integration", "Print-on-demand", "Commission tracking", "Style protection"]
+      color: "bg-purple-500/10 border-purple-500/20",
+      useCases: [
+        { name: "Art", href: "/use-cases/art", description: "Digital rights for artists and art creators" },
+        { name: "Architecture", href: "/use-cases/architecture", description: "Protecting architectural designs and concepts" },
+        { name: "Galleries", href: "/use-cases/galleries", description: "Gallery and exhibition rights management" },
+        { name: "Creative Spaces", href: "/use-cases/creative-spaces", description: "Rights management for creative venues" },
+        { name: "Museums", href: "/use-cases/museums", description: "Museum collection and exhibition protection" }
+      ]
     },
     {
+      title: "Media & Entertainment",
+      description: "Comprehensive protection for media and entertainment content",
       icon: Video,
-      title: "Video Content",
-      description: "Monitor your video content across platforms and protect against unauthorized uploads.",
-      features: ["Content ID matching", "Platform takedowns", "Clip monitoring", "Revenue sharing"]
+      color: "bg-blue-500/10 border-blue-500/20",
+      useCases: [
+        { name: "Film", href: "/use-cases/film", description: "Film production and distribution rights" },
+        { name: "TV", href: "/use-cases/tv", description: "Television content and broadcast rights" },
+        { name: "Music", href: "/use-cases/music", description: "Music creation and distribution protection" },
+        { name: "Video Games", href: "/use-cases/video-games", description: "Game development and publishing rights" },
+        { name: "Journalism", href: "/use-cases/journalism", description: "News content and editorial protection" },
+        { name: "Authors", href: "/use-cases/authors", description: "Book publishing and literary rights" }
+      ]
     },
     {
-      icon: BookOpen,
-      title: "Written Content",
-      description: "Protect your articles, books, and written works from plagiarism and unauthorized use.",
-      features: ["Text matching", "Translation detection", "Academic protection", "Publishing rights"]
+      title: "Fashion & Lifestyle",
+      description: "Style, beauty, and lifestyle content protection",
+      icon: Shirt,
+      color: "bg-pink-500/10 border-pink-500/20",
+      useCases: [
+        { name: "Fashion", href: "/use-cases/fashion", description: "Fashion design and brand protection" },
+        { name: "Beauty", href: "/use-cases/beauty", description: "Beauty content and influencer rights" },
+        { name: "Models", href: "/use-cases/models", description: "Model portfolio and image rights" },
+        { name: "Cuisine", href: "/use-cases/cuisine", description: "Culinary content and recipe protection" },
+        { name: "Hospitality", href: "/use-cases/hospitality", description: "Hotel and service industry branding" }
+      ]
     },
     {
-      icon: Gamepad2,
-      title: "Game Assets",
-      description: "Protect game assets, characters, and intellectual property in the gaming industry.",
-      features: ["Asset tracking", "Character protection", "Mod monitoring", "IP enforcement"]
+      title: "Technology",
+      description: "Digital safety and technology solutions",
+      icon: Shield,
+      color: "bg-green-500/10 border-green-500/20",
+      useCases: [
+        { name: "Online Safety", href: "/use-cases/online-safety", description: "Digital safety and content moderation" }
+      ]
+    },
+    {
+      title: "Creative Industries",
+      description: "Professional creative services and agencies",
+      icon: Users,
+      color: "bg-orange-500/10 border-orange-500/20",
+      useCases: [
+        { name: "Content Creators", href: "/use-cases/content-creators", description: "Social media and digital content creation" },
+        { name: "Photography", href: "/use-cases/photography", description: "Professional photography services" },
+        { name: "Design", href: "/use-cases/design", description: "Graphic and digital design protection" },
+        { name: "Advertising", href: "/use-cases/advertising", description: "Advertising campaign and creative rights" },
+        { name: "Agency", href: "/use-cases/agency", description: "Creative agency and talent management" },
+        { name: "Auction House", href: "/use-cases/auction-house", description: "Art auction and valuation services" }
+      ]
+    },
+    {
+      title: "Sports & NIL",
+      description: "Sports and name, image, likeness protection",
+      icon: Trophy,
+      color: "bg-red-500/10 border-red-500/20",
+      useCases: [
+        { name: "Sports", href: "/use-cases/sports", description: "Sports content and athlete rights" },
+        { name: "NIL", href: "/use-cases/nil", description: "Name, image, and likeness protection" }
+      ]
     }
   ];
 
@@ -49,42 +90,96 @@ export default function UseCasesPage() {
       />
       
       <PageSection>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {useCases.map((useCase, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 backdrop-blur-sm transition-all hover:border-border hover:bg-muted/50"
-            >
-              <useCase.icon className="mb-6 h-12 w-12" />
-              <h3 className="mb-4 text-2xl font-semibold ">{useCase.title}</h3>
-              <p className="text-muted-foreground mb-6">{useCase.description}</p>
-              <ul className="space-y-2">
-                {useCase.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-foreground rounded-full"></div>
-                    <span className=" text-sm">{feature}</span>
-                  </li>
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl font-bold mb-4">25 Use Cases Across 6 Industries</h2>
+          <p className="text-lg text-muted-foreground">
+            From individual artists to large organizations, Creation Rights provides comprehensive 
+            digital rights management solutions tailored to your specific industry and creative needs.
+          </p>
+        </div>
+      </PageSection>
+
+      <PageSection>
+        <div className="max-w-6xl mx-auto space-y-16">
+          {categories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="space-y-8">
+              <div className="text-center">
+                <div className={`inline-flex items-center justify-center w-16 h-16  ${category.color} mb-4`}>
+                  <category.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
+                <p className="text-muted-foreground max-w-2xl mx-auto">{category.description}</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.useCases.map((useCase, index) => (
+                  <Link
+                    key={index}
+                    href={useCase.href}
+                    className="group block p-6  border border-border bg-card hover:bg-muted/50 transition-all duration-200 hover:border-border/60"
+                  >
+                    <h4 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                      {useCase.name}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {useCase.description}
+                    </p>
+                  </Link>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
       </PageSection>
 
-      <PageSection className="text-center">
-        <h2 className="mb-6 text-3xl font-bold  md:text-4xl">
-          Ready to Protect Your Creative Work?
-        </h2>
-        <p className="mb-10 text-lg text-muted-foreground max-w-2xl mx-auto">
-          No matter what type of creative work you produce, Creation Rights has the tools to protect and monetize it.
-        </p>
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <button className="rounded-full border border-border px-8 py-3 transition-all hover:bg-muted">
-            Start Free Trial
-          </button>
-          <button className="rounded-full border border-border px-8 py-3 transition-all hover:bg-muted">
-            Contact Sales
-          </button>
+      <PageSection className="bg-muted/20">
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">Ready to Protect Your Creative Work?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            No matter what type of creative work you produce, Creation Rights has the tools to protect and monetize it.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="shimmer" size="lg" asChild>
+              <Link href="/demo">Start Free Trial</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/company/contact">Contact Sales</Link>
+            </Button>
+          </div>
+        </div>
+      </PageSection>
+
+      <PageSection>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-primary/10  flex items-center justify-center mx-auto">
+                <Shield className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">Comprehensive Protection</h3>
+              <p className="text-muted-foreground">
+                Advanced AI-powered monitoring and protection across all digital platforms and channels.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-primary/10  flex items-center justify-center mx-auto">
+                <Fingerprint className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">Smart Authentication</h3>
+              <p className="text-muted-foreground">
+                Unique digital fingerprints and blockchain-verified ownership for all your creative works.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-primary/10  flex items-center justify-center mx-auto">
+                <Code className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">Developer-Friendly APIs</h3>
+              <p className="text-muted-foreground">
+                Easy integration with existing workflows through comprehensive APIs and SDKs.
+              </p>
+            </div>
+          </div>
         </div>
       </PageSection>
     </PageLayout>

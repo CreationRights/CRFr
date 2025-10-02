@@ -78,11 +78,11 @@ export default function InteractiveGrid({ className, images = [] }: InteractiveG
     const textureCache = new Map<string, THREE.Texture>();
     
     // Performance optimizations for many images
-    const maxTextureSize = 256; // Optimized for background use with many images
-    const textureFormat = THREE.RGBFormat; // Use RGB instead of RGBA when possible
+    // const maxTextureSize = 256; // Optimized for background use with many images
+    // const textureFormat = THREE.RGBFormat; // Use RGB instead of RGBA when possible
     
     // Limit concurrent texture loading for better performance
-    const maxConcurrentLoads = 4;
+    // const maxConcurrentLoads = 4;
 
     // Create shared geometry for better performance (instancing)
     const sharedGeometry = new THREE.PlaneGeometry(planeSize, planeSize);
