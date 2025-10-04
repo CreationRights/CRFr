@@ -33,6 +33,10 @@ Built with patented dynamic metadata technology, PCI compliance, and enterprise 
 - **Smooth Animations** powered by Framer Motion
 - **Theme-Aware Components** that adapt to light/dark modes
 - **Optimized Performance** with texture caching and shared geometries
+- **Horizontal Carousels** with mouse drag and navigation buttons
+- **Collapsible Accordions** for FAQ sections with smooth animations
+- **Dashboard Calendar Layouts** for timeline and scheduling content
+- **Bento Grid Layouts** for dynamic content presentation
 
 ## Design System
 
@@ -182,6 +186,8 @@ src/
 │
 ├── components/
 │   └── ui/                       # UI components
+│       ├── accordion.tsx         # shadcn/ui accordion component
+│       ├── animated-list.tsx     # Animated list component
 │       ├── button.tsx            # Button with shimmer variant
 │       ├── footer.tsx            # Site footer with links
 │       ├── hero-section.tsx      # Hero section containers
@@ -218,6 +224,7 @@ public/
 ### Styling & UI
 - **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS with custom theme variables
 - **[Radix UI](https://www.radix-ui.com/)** - Unstyled, accessible component primitives
+  - Accordion (`@radix-ui/react-accordion`)
   - Navigation Menu (`@radix-ui/react-navigation-menu`)
   - Slot (`@radix-ui/react-slot`)
 - **[Lucide React](https://lucide.dev/)** - Beautiful, consistent icon library (500+ icons)
