@@ -371,7 +371,7 @@ export default function MetadataPage() {
       {/* Living Rights Infrastructure */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Beyond Static Metadata: Living Rights Infrastructure</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Beyond Static Metadata: Living Rights Infrastructure</h2>
           <div className="space-y-8">
             {livingRightsFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -386,7 +386,7 @@ export default function MetadataPage() {
       {/* How Dynamic Metadata Works */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">How Dynamic Metadata Works</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">How Dynamic Metadata Works</h2>
           <div className="space-y-12">
             {howItWorks.map((section, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -414,7 +414,7 @@ export default function MetadataPage() {
       {/* Technical Architecture */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Technical Architecture</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Technical Architecture</h2>
           <div className="space-y-12">
             {technicalArchitecture.map((arch, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -469,7 +469,7 @@ export default function MetadataPage() {
       {/* Dynamic Capabilities */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Dynamic Capabilities</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Dynamic Capabilities</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {dynamicCapabilities.map((capability, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -495,7 +495,7 @@ export default function MetadataPage() {
       {/* Schema Evolution */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Metadata Schema Evolution</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Metadata Schema Evolution</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {schemaEvolution.map((evolution, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -521,7 +521,7 @@ export default function MetadataPage() {
       {/* Performance & Scalability */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Performance & Scalability</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Performance & Scalability</h2>
           
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-8 text-center">Enterprise-Grade Infrastructure</h3>
@@ -529,7 +529,7 @@ export default function MetadataPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {performanceMetrics.map((metric, index) => (
                 <div key={index} className="bg-background border border-border p-6 text-center">
-                  <div className="text-2xl font-bold mb-2 text-primary">{metric.metric}</div>
+                  <div className="text-2xl font-semibold mb-2 text-primary">{metric.metric}</div>
                   <p className="text-muted-foreground text-sm">{metric.description}</p>
                 </div>
               ))}
@@ -589,7 +589,7 @@ export default function MetadataPage() {
       {/* Security & Privacy */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Security & Privacy</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Security & Privacy</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {securityFeatures.map((security, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -615,7 +615,7 @@ export default function MetadataPage() {
       {/* Integration Capabilities */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Integration Capabilities</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Integration Capabilities</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {integrationCapabilities.map((integration, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -638,7 +638,7 @@ export default function MetadataPage() {
       {/* Real-World Applications */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Real-World Applications</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Real-World Applications</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {realWorldApplications.map((application, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -666,7 +666,7 @@ export default function MetadataPage() {
       {/* Future Innovation */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Future Innovation</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Future Innovation</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {futureInnovation.map((innovation, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -694,7 +694,7 @@ export default function MetadataPage() {
       {/* Get Started */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Get Started with Dynamic Metadata</h2>
+          <h2 className="text-4xl font-semibold mb-6">Get Started with Dynamic Metadata</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div>
@@ -758,7 +758,7 @@ export default function MetadataPage() {
       {/* FAQ */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-background border border-border p-8">

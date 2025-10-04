@@ -283,7 +283,7 @@ export default function ContentCreatorsPage() {
       {/* The Creator Economy's Rights Crisis */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">The Creator Economy&apos;s Rights Crisis</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">The Creator Economy&apos;s Rights Crisis</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {challenges.map((challenge, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -307,7 +307,7 @@ export default function ContentCreatorsPage() {
       {/* How Creation Rights Transforms Creator Protection */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">How Creation Rights Transforms Creator Protection</h2>
+          <h2 className="text-4xl font-semibold mb-4 text-center">How Creation Rights Transforms Creator Protection</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -331,7 +331,7 @@ export default function ContentCreatorsPage() {
       {/* The Provenance Graph */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">The Provenance Graph</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">The Provenance Graph</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
             Our comprehensive provenance system captures the complexity of content creation, from initial concept to multi-platform distribution and collaborative contributions.
           </p>
@@ -350,7 +350,7 @@ export default function ContentCreatorsPage() {
       {/* Advanced Features */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Advanced Features for Content Creators</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Advanced Features for Content Creators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="p-6 border border-border bg-background">
@@ -366,7 +366,7 @@ export default function ContentCreatorsPage() {
       {/* Creator Economy Integration */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Creator Economy Integration</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Creator Economy Integration</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {advancedFeatures.map((category, index) => (
               <div key={index} className="bg-card border border-border p-8">
@@ -390,7 +390,7 @@ export default function ContentCreatorsPage() {
       {/* Before / After */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Before / After Creation Rights</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Before / After Creation Rights</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {beforeAfter.map((section, index) => (
               <div key={index} className="space-y-6">
@@ -416,7 +416,7 @@ export default function ContentCreatorsPage() {
       {/* Success Stories */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Creator Success Stories</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Creator Success Stories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <div key={index} className="bg-card border border-border p-8">
@@ -445,7 +445,7 @@ export default function ContentCreatorsPage() {
       {/* Demo CTA */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Creator Career?</h2>
+          <h2 className="text-4xl font-semibold mb-6">Ready to Transform Your Creator Career?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Join thousands of content creators who have protected their work, automated their rights management, and built sustainable creator businesses through comprehensive content protection that preserves creative freedom while ensuring fair compensation.
           </p>
@@ -463,7 +463,7 @@ export default function ContentCreatorsPage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-border pb-6">

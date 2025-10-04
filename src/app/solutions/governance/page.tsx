@@ -319,23 +319,24 @@ export default function GovernancePage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <PageHeader
-        title="Governance Platform"
-        subtitle="Community-driven protocol evolution through dynamic consensus"
-      />
-      
-      <PageSection>
-        <div className="text-center max-w-4xl mx-auto">
-          <p className="text-xl text-muted-foreground mb-12">
+      <section className="px-6 py-24 sm:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto text-left">
+          <h1 className="mb-2 text-4xl font-semibold md:text-6xl">
+            Governance Platform
+          </h1>
+          <p className="text-4xl font-semibold text-muted-foreground max-w-3xl md:text-6xl mb-8">
+            Community-driven protocol evolution through dynamic consensus
+          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl">
             Empower creators, developers, and stakeholders to collectively govern the future of digital rights. Creation Rights Governance uses our dynamic metadata protocol to create transparent, efficient decision-making without blockchain complexity.
           </p>
         </div>
-      </PageSection>
+      </section>
 
       {/* Dynamic Protocol */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Beyond Blockchain: Dynamic Governance Protocol</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Beyond Blockchain: Dynamic Governance Protocol</h2>
           <div className="space-y-8">
             {dynamicProtocolFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -349,8 +350,8 @@ export default function GovernancePage() {
 
       {/* Governance Structure */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Governance Structure</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Governance Structure</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {governanceStructure.map((structure, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -377,8 +378,8 @@ export default function GovernancePage() {
 
       {/* Consensus Mechanisms */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Dynamic Consensus Mechanisms</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Dynamic Consensus Mechanisms</h2>
           <div className="space-y-8">
             {consensusMechanisms.map((mechanism, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -402,8 +403,8 @@ export default function GovernancePage() {
 
       {/* Participation Through Usage */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Participation Through Platform Usage</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Participation Through Platform Usage</h2>
           
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-8 text-center">Influence Through Contribution</h3>
@@ -448,8 +449,8 @@ export default function GovernancePage() {
 
       {/* Current Initiatives */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Current Governance Initiatives</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Current Governance Initiatives</h2>
           
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-8">Active Discussions</h3>
@@ -461,19 +462,19 @@ export default function GovernancePage() {
                       <h4 className="text-lg font-semibold mb-2">{initiative.title}</h4>
                       <p className="text-muted-foreground text-sm mb-2">{initiative.description}</p>
                     </div>
-                    <div className="bg-primary text-primary-foreground px-3 py-1 text-xs font-medium">
+                    <div className="bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold">
                       {initiative.status.toUpperCase()}
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                     <div>
-                      <span className="font-medium">Phase:</span> {initiative.phase}
+                      <span className="font-semibold">Phase:</span> {initiative.phase}
                     </div>
                     <div>
-                      <span className="font-medium">Stakeholders:</span> {initiative.stakeholders}
+                      <span className="font-semibold">Stakeholders:</span> {initiative.stakeholders}
                     </div>
                     <div>
-                      <span className="font-medium">Consensus Status:</span> {initiative.consensus}
+                      <span className="font-semibold">Consensus Status:</span> {initiative.consensus}
                     </div>
                   </div>
                 </div>
@@ -497,8 +498,8 @@ export default function GovernancePage() {
 
       {/* Governance Dashboard */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Governance Dashboard</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Governance Dashboard</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {dashboardFeatures.map((feature, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -519,8 +520,8 @@ export default function GovernancePage() {
 
       {/* Governance Tools */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Governance Tools & Resources</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Governance Tools & Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {governanceTools.map((tool, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -545,8 +546,8 @@ export default function GovernancePage() {
 
       {/* Transparency & Accountability */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Transparency & Accountability</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Transparency & Accountability</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {transparencyFeatures.map((feature, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -572,7 +573,7 @@ export default function GovernancePage() {
       {/* Join Governance */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Join Platform Governance</h2>
+          <h2 className="text-4xl font-semibold mb-6">Join Platform Governance</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div>
@@ -582,28 +583,28 @@ export default function GovernancePage() {
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
                   <div>
-                    <span className="font-medium">Create and Contribute</span>
+                    <span className="font-semibold">Create and Contribute</span>
                     <p className="text-muted-foreground text-sm">Your platform activity automatically builds governance influence</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
                   <div>
-                    <span className="font-medium">Engage with Proposals</span>
+                    <span className="font-semibold">Engage with Proposals</span>
                     <p className="text-muted-foreground text-sm">Comment, refine, and collaborate on community decisions</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
                   <div>
-                    <span className="font-medium">Share Expertise</span>
+                    <span className="font-semibold">Share Expertise</span>
                     <p className="text-muted-foreground text-sm">Your knowledge and experience inform better governance outcomes</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
                   <div>
-                    <span className="font-medium">Shape the Future</span>
+                    <span className="font-semibold">Shape the Future</span>
                     <p className="text-muted-foreground text-sm">Direct influence on platform evolution and creator rights advancement</p>
                   </div>
                 </div>
@@ -643,7 +644,7 @@ export default function GovernancePage() {
       {/* Governance Calendar */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Governance Calendar</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Governance Calendar</h2>
           <h3 className="text-2xl font-semibold mb-8 text-center">Ongoing Initiatives</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {calendarItems.map((item, index) => (
@@ -662,7 +663,7 @@ export default function GovernancePage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-muted/20 border border-border p-8">

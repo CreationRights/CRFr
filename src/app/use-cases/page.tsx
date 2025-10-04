@@ -91,7 +91,7 @@ export default function UseCasesPage() {
       
       <PageSection>
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold mb-4">25 Use Cases Across 6 Industries</h2>
+          <h2 className="text-3xl font-semibold mb-4">25 Use Cases Across 6 Industries</h2>
           <p className="text-lg text-muted-foreground">
             From individual artists to large organizations, Creation Rights provides comprehensive 
             digital rights management solutions tailored to your specific industry and creative needs.
@@ -107,7 +107,7 @@ export default function UseCasesPage() {
                 <div className={`inline-flex items-center justify-center w-16 h-16  ${category.color} mb-4`}>
                   <category.icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
+                <h3 className="text-2xl font-semibold mb-2">{category.title}</h3>
                 <p className="text-muted-foreground max-w-2xl mx-auto">{category.description}</p>
               </div>
               
@@ -134,7 +134,7 @@ export default function UseCasesPage() {
 
       <PageSection className="bg-muted/20">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Ready to Protect Your Creative Work?</h2>
+          <h2 className="text-3xl font-semibold mb-6">Ready to Protect Your Creative Work?</h2>
           <p className="text-lg text-muted-foreground mb-8">
             No matter what type of creative work you produce, Creation Rights has the tools to protect and monetize it.
           </p>

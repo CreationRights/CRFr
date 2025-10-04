@@ -1,5 +1,16 @@
+"use client";
+
 import { PageLayout, PageHeader, PageSection } from "@/components/ui/page-layout";
 import { Button } from "@/components/ui/button";
+import { AnimatedList } from "@/components/ui/animated-list";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { 
   BarChart3, 
   Bot, 
@@ -7,6 +18,7 @@ import {
   RefreshCw, 
   Briefcase,
   CheckCircle,
+  Check,
   X,
   Film,
   Music,
@@ -19,15 +31,74 @@ import {
   Globe,
   Clock,
   Zap,
-  Search
+  Search,
+  ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 
+function AnimateOnScroll({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('animate-in');
+          }, delay);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [delay]);
+
+  return <div ref={ref} className="opacity-0 flex flex-col flex-1">{children}</div>;
+}
+
 export default function OrganizationsPage() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   const scaleFeatures = [
     {
       title: "Manage unlimited creators and assets from a single dashboard.",
-      description: "Whether you&apos;re a creative agency with 50 freelancers or a media company with 10,000 content pieces, our AI-first architecture scales seamlessly without performance degradation."
+      description: "Whether you're a creative agency with 50 freelancers or a media company with 10,000 content pieces, our AI-first architecture scales seamlessly without performance degradation."
     },
     {
       title: "Unified rights management across all content types",
@@ -103,6 +174,7 @@ export default function OrganizationsPage() {
     {
       icon: Film,
       title: "Media & Entertainment",
+      image: "/grid-images/hero-05.jpg",
       features: [
         "Track usage across streaming platforms, broadcast, and digital distribution",
         "Manage complex multi-party royalty agreements",
@@ -113,6 +185,7 @@ export default function OrganizationsPage() {
     {
       icon: Music,
       title: "Music Labels & Publishers",
+      image: "/grid-images/hero-12.jpg",
       features: [
         "Real-time sync licensing opportunities",
         "Automated mechanical royalty distribution",
@@ -123,6 +196,7 @@ export default function OrganizationsPage() {
     {
       icon: Camera,
       title: "Creative Agencies",
+      image: "/grid-images/hero-08.jpg",
       features: [
         "Client asset management with usage tracking",
         "Photographer and designer royalty automation",
@@ -133,6 +207,7 @@ export default function OrganizationsPage() {
     {
       icon: Gamepad2,
       title: "Gaming Studios",
+      image: "/grid-images/hero-15.jpg",
       features: [
         "Asset reuse tracking across multiple titles",
         "Contractor and freelancer payment automation",
@@ -143,6 +218,7 @@ export default function OrganizationsPage() {
     {
       icon: Tv,
       title: "Content Creators & MCNs",
+      image: "/grid-images/hero-03.jpg",
       features: [
         "Multi-creator revenue optimization",
         "Brand partnership tracking and payments",
@@ -176,7 +252,7 @@ export default function OrganizationsPage() {
         "SOC 2 Type II security controls",
         "GDPR compliant data handling",
         "Patent-protected Dynamic Metadata technology",
-        "Lloyd&apos;s Lab partnership for innovative insurance products"
+        "Lloyd's Lab partnership for innovative insurance products"
       ]
     },
     {
@@ -219,7 +295,7 @@ export default function OrganizationsPage() {
     },
     {
       title: "Independent Music Label",
-      quote: "Our catalog of 5,000+ tracks was sitting there earning basic streaming royalties. Creation Rights opened up AI training licensing, sync opportunities, and remix revenue we never knew existed. It&apos;s like discovering a goldmine in our own backyard.",
+      quote: "Our catalog of 5,000+ tracks was sitting there earning basic streaming royalties. Creation Rights opened up AI training licensing, sync opportunities, and remix revenue we never knew existed. It's like discovering a goldmine in our own backyard.",
       results: [
         "60% increase in per-track revenue",
         "$300K in new licensing deals in 18 months",
@@ -230,11 +306,19 @@ export default function OrganizationsPage() {
   ];
 
   const integrationPartners = [
-    "Content Management Systems (Adobe Creative Cloud, Avid, Final Cut)",
-    "Financial Systems (QuickBooks, SAP, Oracle)",
-    "Distribution Platforms (YouTube, Spotify, Getty Images)",
-    "Legal Management Tools (ContractWorks, Ironclad)",
-    "Analytics Platforms (Google Analytics, Adobe Analytics)"
+    "Adobe Creative Cloud",
+    "Avid",
+    "Final Cut",
+    "QuickBooks",
+    "SAP",
+    "Oracle",
+    "YouTube",
+    "Spotify",
+    "Getty Images",
+    "ContractWorks",
+    "Ironclad",
+    "Google Analytics",
+    "Adobe Analytics"
   ];
 
   const faqItems = [
@@ -255,7 +339,7 @@ export default function OrganizationsPage() {
       answer: "Our platform supports multi-jurisdictional rights management with automated compliance for different territorial requirements."
     },
     {
-      question: "What&apos;s the minimum portfolio size for enterprise features?",
+      question: "What's the minimum portfolio size for enterprise features?",
       answer: "We work with organizations of all sizes. Enterprise features are available based on needs, not just portfolio size."
     }
   ];
@@ -263,26 +347,27 @@ export default function OrganizationsPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <PageHeader
-        title="For Organizations"
-        subtitle="Scale creator rights management across your entire content portfolio"
-      />
-      
-      <PageSection>
-        <div className="text-center max-w-4xl mx-auto">
-          <p className="text-xl text-muted-foreground mb-12">
+      <section className="px-6 py-24 sm:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto text-left">
+          <h1 className="mb-2 text-4xl font-semibold md:text-6xl">
+            For Organizations
+          </h1>
+          <p className="text-4xl font-semibold text-muted-foreground max-w-3xl md:text-6xl mb-8">
+            Scale creator rights management across your entire content portfolio
+          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl">
             Transform how your organization protects, tracks, and monetizes creative assets. From agencies managing hundreds of creators to studios producing thousands of assets, Creation Rights delivers enterprise-grade rights infrastructure without enterprise complexity.
           </p>
         </div>
-      </PageSection>
+      </section>
 
       {/* Built for Scale */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Built for Scale, Designed for Teams</h2>
-          <div className="space-y-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-left">Built for Scale, Designed for Teams</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {scaleFeatures.map((feature, index) => (
-              <div key={index} className="bg-muted/20 p-8 border border-border">
+              <div key={index} className="bg-muted/50 p-8">
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>
@@ -292,29 +377,36 @@ export default function OrganizationsPage() {
       </PageSection>
 
       {/* Revenue Optimization */}
-      <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Revenue Optimization at Portfolio Scale</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <PageSection>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-left">Revenue Optimization at Portfolio Scale</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {revenueOptimization.map((item, index) => (
-              <div key={index} className="bg-background border border-border p-8">
-                <div className="flex items-center space-x-3 mb-6">
-                  <item.icon className="h-8 w-8 text-primary" />
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
+              <div key={index} className="bg-muted/50 p-6 flex flex-col justify-between lg:min-h-[320px]">
+                {/* Top Section: Icon */}
+                <div>
+                  <item.icon className="h-6 w-6 text-foreground" />
                 </div>
-                {item.description && (
-                  <p className="text-muted-foreground">{item.description}</p>
-                )}
-                {item.features && (
-                  <ul className="space-y-3">
-                    {item.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-2">
-                        <CheckCircle className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+
+                {/* Bottom Section: Heading, Description and Features */}
+                <div className="space-y-3 mt-6">
+                  <h3 className="text-base font-semibold">{item.title}</h3>
+                  {item.description && (
+                    <p className="text-muted-foreground text-sm">{item.description}</p>
+                  )}
+                  {item.features && (
+                    <ul className="space-y-2">
+                      {item.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start space-x-2">
+                          <div className="flex-shrink-0 w-4 h-4 rounded-full bg-primary flex items-center justify-center mt-0.5">
+                            <Check className="h-2.5 w-2.5 text-white stroke-[3]" />
+                          </div>
+                          <span className="text-muted-foreground text-xs">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -323,85 +415,187 @@ export default function OrganizationsPage() {
 
       {/* Operational Challenges */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Solve Your Biggest Operational Challenges</h2>
-          <div className="space-y-12">
-            {operationalChallenges.map((item, index) => (
-              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div className="bg-muted/20 p-8 border border-border">
-                  <h3 className="text-xl font-semibold mb-4 text-destructive">{item.challenge} → {item.solution}</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <X className="h-5 w-5 mt-1 text-destructive flex-shrink-0" />
-                      <div>
-                        <span className="font-medium">Before:</span>
-                        <p className="text-muted-foreground">{item.before}</p>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Column: Heading */}
+            <div>
+              <h2 className="text-4xl font-semibold text-left lg:sticky lg:top-24">Solve Your Biggest Operational Challenges</h2>
+            </div>
+            
+            {/* Right Column: Cards */}
+            <div className="space-y-12 lg:space-y-20">
+              {operationalChallenges.map((item, index) => (
+                <div key={index} className="flex flex-col md:flex-row gap-8 md:items-stretch">
+                  {/* Before Card */}
+                  <div className="flex-1 flex flex-col">
+                    <AnimateOnScroll delay={0}>
+                      <div className="border border-muted p-6 flex flex-col justify-between flex-1 md:min-h-[250px]">
+                        {/* Top: Badge */}
+                        <div className="flex items-center gap-2">
+                          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-foreground">
+                            <X className="h-3 w-3 text-background stroke-[3]" />
+                          </div>
+                          <span className="font-semibold text-sm">Before</span>
+                        </div>
+                        
+                        {/* Bottom: Heading and Description */}
+                        <div className="space-y-3 mt-6">
+                          <h3 className="text-base font-semibold">{item.challenge}</h3>
+                          <p className="text-sm text-muted-foreground">{item.before}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
-                      <div>
-                        <span className="font-medium">After:</span>
-                        <p className="text-muted-foreground">{item.after}</p>
+                    </AnimateOnScroll>
+                  </div>
+                  
+                  {/* Arrow */}
+                  <div className="flex justify-center items-center md:flex-shrink-0 md:self-center">
+                    <AnimateOnScroll delay={100}>
+                      <div className="flex h-5 w-5 items-center justify-center rounded-full bg-foreground">
+                        <ArrowRight className="h-3 w-3 text-background stroke-[3] rotate-90 md:rotate-0" />
                       </div>
-                    </div>
+                    </AnimateOnScroll>
+                  </div>
+                  
+                  {/* After Card */}
+                  <div className="flex-1 flex flex-col">
+                    <AnimateOnScroll delay={200}>
+                      <div className="border border-muted p-6 flex flex-col justify-between flex-1 md:min-h-[250px]">
+                        {/* Top: Badge */}
+                        <div className="flex items-center gap-2">
+                          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-primary">
+                            <Check className="h-3 w-3 text-white stroke-[3]" />
+                          </div>
+                          <span className="font-semibold text-sm">After</span>
+                        </div>
+                        
+                        {/* Bottom: Heading and Description */}
+                        <div className="space-y-3 mt-6">
+                          <h3 className="text-base font-semibold">{item.solution}</h3>
+                          <p className="text-sm text-muted-foreground">{item.after}</p>
+                        </div>
+                      </div>
+                    </AnimateOnScroll>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </PageSection>
 
       {/* Industry Solutions */}
-      <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Industry-Specific Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => (
-              <div key={index} className="bg-background border border-border p-8">
-                <div className="flex items-center space-x-3 mb-6">
-                  <industry.icon className="h-8 w-8 text-primary" />
-                  <h3 className="text-xl font-semibold">{industry.title}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {industry.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+      <section className="py-16">
+        {/* Header */}
+        <div className="px-6 sm:px-16 lg:px-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-4xl font-semibold text-left">Industry-Specific Solutions</h2>
+              <div className="flex gap-2">
+              <button 
+                onClick={() => {
+                  if (carouselRef.current) carouselRef.current.scrollBy({ left: -440, behavior: 'smooth' });
+                }}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:bg-muted transition-colors"
+              >
+                <ArrowRight className="h-5 w-5 rotate-180" />
+              </button>
+              <button 
+                onClick={() => {
+                  if (carouselRef.current) carouselRef.current.scrollBy({ left: 440, behavior: 'smooth' });
+                }}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:bg-muted transition-colors"
+              >
+                <ArrowRight className="h-5 w-5" />
+              </button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </PageSection>
+        
+        {/* Carousel - Full Width */}
+        <div 
+          id="industry-carousel"
+          ref={carouselRef}
+          className={`overflow-x-auto scrollbar-hide ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          style={{ userSelect: isDragging ? 'none' : 'auto' }}
+        >
+          <div className="flex gap-6 pl-6 sm:pl-16 lg:pl-24">
+            {industrySolutions.map((industry, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 w-[420px] h-[520px] relative overflow-hidden group"
+                  style={{
+                    backgroundImage: `url(${industry.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                >
+                  {/* Background with gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30" />
+                  
+                  {/* Content */}
+                  <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
+                    <div className="flex items-center gap-3">
+                      <industry.icon className="h-6 w-6" />
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-4">{industry.title}</h3>
+                      <ul className="space-y-2">
+                        {industry.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx} className="flex items-start space-x-2 text-sm opacity-90">
+                            <div className="flex-shrink-0 w-4 h-4 rounded-full bg-primary flex items-center justify-center mt-0.5">
+                              <Check className="h-2.5 w-2.5 text-white stroke-[3]" />
+                            </div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {/* Spacer for last card */}
+              <div className="flex-shrink-0 w-6 sm:w-16 lg:w-24" />
+          </div>
+        </div>
+      </section>
 
       {/* Infrastructure */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Enterprise-Grade Infrastructure</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-left">Enterprise-Grade Infrastructure</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {infrastructureFeatures.map((feature, index) => (
-              <div key={index} className="bg-muted/20 p-8 border border-border">
-                <div className="flex items-center space-x-3 mb-6">
-                  <feature.icon className="h-8 w-8 text-primary" />
-                  <h3 className="text-xl font-semibold">{feature.title}</h3>
+              <div key={index} className="bg-muted/50 p-6 flex flex-col justify-between lg:min-h-[320px]">
+                {/* Top Section: Icon */}
+                <div>
+                  <feature.icon className="h-6 w-6 text-foreground" />
                 </div>
-                {feature.description && (
-                  <p className="text-muted-foreground">{feature.description}</p>
-                )}
-                {feature.features && (
-                  <ul className="space-y-3">
-                    {feature.features.map((item, idx) => (
-                      <li key={idx} className="flex items-start space-x-2">
-                        <CheckCircle className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+
+                {/* Bottom Section: Heading, Description and Features */}
+                <div className="space-y-3 mt-6">
+                  <h3 className="text-base font-semibold">{feature.title}</h3>
+                  {feature.description && (
+                    <p className="text-muted-foreground text-sm">{feature.description}</p>
+                  )}
+                  {feature.features && (
+                    <ul className="space-y-2">
+                      {feature.features.map((item, idx) => (
+                        <li key={idx} className="flex items-start space-x-2">
+                          <div className="flex-shrink-0 w-4 h-4 rounded-full bg-primary flex items-center justify-center mt-0.5">
+                            <Check className="h-2.5 w-2.5 text-white stroke-[3]" />
+                          </div>
+                          <span className="text-muted-foreground text-xs">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -409,51 +603,78 @@ export default function OrganizationsPage() {
       </PageSection>
 
       {/* Implementation */}
-      <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Implementation & Support</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-8">Rapid Deployment</h3>
-              <div className="space-y-6">
-                {implementationSteps.map((step, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center text-sm font-semibold">
-                      {index + 1}
+      <PageSection>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-8 text-left">Implementation & Support</h2>
+          
+          {/* Dashboard Container */}
+          <div className="border border-border bg-background overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-4 divide-x divide-border">
+              {/* Main Calendar Grid - Left Side */}
+              <div className="lg:col-span-3 p-6">
+                <h3 className="text-lg font-semibold mb-4">Rapid Deployment Timeline</h3>
+                
+                {/* Calendar Grid */}
+                <div className="grid grid-cols-2 gap-[1px] bg-border border border-border">
+                  {implementationSteps.map((step, index) => (
+                    <div 
+                      key={index} 
+                      className="bg-background p-3 min-h-[180px] flex flex-col"
+                    >
+                      <div className="flex items-center gap-1 text-xs text-muted-foreground font-medium mb-3">
+                        {step.week === "Ongoing" ? (
+                          <>
+                            <Zap className="h-3 w-3" />
+                            <span>Ongoing Support</span>
+                          </>
+                        ) : (
+                          <span>{step.week}</span>
+                        )}
+                      </div>
+                      <div className="bg-primary/10 border-l-2 border-primary px-3 py-2 rounded-sm">
+                        <p className="text-xs text-muted-foreground leading-relaxed">{step.task}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold">{step.week}</h4>
-                      <p className="text-muted-foreground">{step.task}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Migration Made Simple</h3>
-                <p className="text-muted-foreground">Our team handles the complex work of migrating your existing content library, preserving all metadata and rights information while adding Creation Rights protection.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Training & Onboarding</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
+              
+              {/* Dashboard Sidebar - Right Side */}
+              <div className="p-6 space-y-6">
+                <div>
+                  <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+                    <Database className="h-4 w-4 text-primary" />
+                    Migration Made Simple
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Our team handles the complex work of migrating your existing content library, preserving all metadata and rights information while adding Creation Rights protection.
+                  </p>
+                </div>
+                
+                <div className="border-t border-border pt-6">
+                  <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-muted-foreground text-sm">Comprehensive team training programs</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-muted-foreground text-sm">Custom workflow documentation</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-muted-foreground text-sm">Ongoing education on new features</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-muted-foreground text-sm">Best practices consulting</span>
-                  </li>
-                </ul>
+                    Training & Onboarding
+                  </h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span className="text-xs text-muted-foreground">Comprehensive team training programs</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span className="text-xs text-muted-foreground">Custom workflow documentation</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span className="text-xs text-muted-foreground">Ongoing education on new features</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span className="text-xs text-muted-foreground">Best practices consulting</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -462,25 +683,63 @@ export default function OrganizationsPage() {
 
       {/* ROI Results */}
       <PageSection>
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">ROI That Speaks for Itself</h2>
-          <h3 className="text-2xl font-semibold mb-12 text-muted-foreground">Typical Results Within 90 Days:</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {roiMetrics.map((metric, index) => (
-              <div key={index} className="bg-muted/20 p-8 border border-border text-center">
-                <metric.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                <div className="text-2xl font-bold mb-2">{metric.metric}</div>
-                <p className="text-muted-foreground">{metric.description}</p>
-              </div>
-            ))}
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-4 text-left">ROI That Speaks for Itself</h2>
+          <h3 className="text-xl text-muted-foreground mb-12">Typical Results Within 90 Days:</h3>
+          
+          {/* Bento Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {roiMetrics.map((metric, index) => {
+              const Icon = metric.icon;
+              // Large card for first metric
+              if (index === 0) {
+                return (
+                  <div key={index} className="bg-muted/50 p-6 flex flex-col justify-between lg:min-h-[320px] lg:col-span-2">
+                    <div>
+                      <Icon className="h-6 w-6 text-foreground" />
+                    </div>
+                    <div className="space-y-3 mt-6">
+                      <div className="text-3xl font-semibold">{metric.metric}</div>
+                      <p className="text-muted-foreground text-sm">{metric.description}</p>
+                    </div>
+                  </div>
+                );
+              }
+              // Regular cards for 2nd and 3rd metrics
+              if (index === 1 || index === 2) {
+                return (
+                  <div key={index} className="bg-muted/50 p-6 flex flex-col justify-between lg:min-h-[320px]">
+                    <div>
+                      <Icon className="h-6 w-6 text-foreground" />
+                    </div>
+                    <div className="space-y-3 mt-6">
+                      <div className="text-2xl font-semibold">{metric.metric}</div>
+                      <p className="text-muted-foreground text-xs">{metric.description}</p>
+                    </div>
+                  </div>
+                );
+              }
+              // Wide cards for remaining metrics
+              return (
+                <div key={index} className="bg-muted/50 p-6 flex flex-col justify-between lg:min-h-[200px] lg:col-span-2">
+                  <div>
+                    <Icon className="h-6 w-6 text-foreground" />
+                  </div>
+                  <div className="space-y-3 mt-6">
+                    <div className="text-2xl font-semibold">{metric.metric}</div>
+                    <p className="text-muted-foreground text-xs">{metric.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </PageSection>
 
       {/* Case Studies */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Case Studies</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Case Studies</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -508,9 +767,9 @@ export default function OrganizationsPage() {
       {/* Strategic Consultation CTA */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Scale Your Rights Management?</h2>
+          <h2 className="text-4xl font-semibold mb-6">Ready to Scale Your Rights Management?</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Book a strategic consultation where we&apos;ll analyze your content portfolio and show you:
+            Book a strategic consultation where we'll analyze your content portfolio and show you:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 text-left">
             <div className="flex items-center space-x-2">
@@ -542,34 +801,43 @@ export default function OrganizationsPage() {
       </PageSection>
 
       {/* Integration Partners */}
-      <PageSection className="bg-muted/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Integration Partners</h2>
-          <div className="text-center">
-            <p className="text-xl font-semibold mb-8">Seamlessly connects with:</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {integrationPartners.map((partner, index) => (
-                <div key={index} className="bg-background border border-border p-6">
-                  <p className="text-muted-foreground">{partner}</p>
-                </div>
-              ))}
-            </div>
+      <PageSection>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-4 text-left">Integration Partners</h2>
+          <p className="text-xl text-muted-foreground mb-12">Seamlessly connects with:</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {integrationPartners.map((partner, index) => (
+              <div key={index} className="bg-muted/50 p-6 flex flex-col items-center justify-center gap-3 min-h-[140px]">
+                <Image 
+                  src="/creation-rights logo icon white.svg" 
+                  alt="Logo" 
+                  width={48} 
+                  height={48}
+                  className="opacity-50"
+                />
+                <p className="text-muted-foreground text-xs text-center font-medium">{partner}</p>
+              </div>
+            ))}
           </div>
         </div>
       </PageSection>
 
       {/* FAQ */}
       <PageSection>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-left">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
             {faqItems.map((item, index) => (
-              <div key={index} className="bg-muted/20 border border-border p-8">
-                <h3 className="text-xl font-semibold mb-4">Q: {item.question}</h3>
-                <p className="text-muted-foreground">A: {item.answer}</p>
-              </div>
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="text-base font-normal text-left">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-muted-foreground">{item.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </PageSection>
     </PageLayout>

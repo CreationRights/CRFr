@@ -228,7 +228,7 @@ export default function HelpPage() {
       {/* Quick Start Guide */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Rocket className="h-8 w-8 mr-3 text-primary" />
             Getting Started
           </h2>
@@ -270,7 +270,7 @@ export default function HelpPage() {
       {/* Content Management */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Upload className="h-8 w-8 mr-3 text-primary" />
             Content Management
           </h2>
@@ -349,7 +349,7 @@ export default function HelpPage() {
       {/* Licensing & Rights */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Shield className="h-8 w-8 mr-3 text-primary" />
             Licensing & Rights
           </h2>
@@ -382,7 +382,7 @@ export default function HelpPage() {
       {/* Monitoring & Analytics */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <BarChart3 className="h-8 w-8 mr-3 text-primary" />
             Monitoring & Analytics
           </h2>
@@ -411,7 +411,7 @@ export default function HelpPage() {
       {/* Revenue & Payments */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <DollarSign className="h-8 w-8 mr-3 text-primary" />
             Revenue & Payments
           </h2>
@@ -485,7 +485,7 @@ export default function HelpPage() {
       {/* Security & Privacy */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Lock className="h-8 w-8 mr-3 text-primary" />
             Security & Privacy
           </h2>
@@ -553,7 +553,7 @@ export default function HelpPage() {
       {/* Collaboration & Teams */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Users className="h-8 w-8 mr-3 text-primary" />
             Collaboration & Teams
           </h2>
@@ -615,7 +615,7 @@ export default function HelpPage() {
       {/* Technical Support */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Settings className="h-8 w-8 mr-3 text-primary" />
             Technical Support
           </h2>
@@ -713,7 +713,7 @@ export default function HelpPage() {
         {/* Support Options */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <HelpCircle className="h-8 w-8 mr-3 text-primary" />
             Contact & Support
           </h2>
@@ -742,7 +742,7 @@ export default function HelpPage() {
       {/* Advanced Features */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Zap className="h-8 w-8 mr-3 text-primary" />
             Advanced Features
           </h2>
@@ -810,7 +810,7 @@ export default function HelpPage() {
       {/* Updates & Changelog */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Calendar className="h-8 w-8 mr-3 text-primary" />
             Updates & Changelog
           </h2>
@@ -884,7 +884,7 @@ export default function HelpPage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-muted/20 border border-border p-8">
@@ -899,7 +899,7 @@ export default function HelpPage() {
       {/* CTA */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Still Need Help?</h2>
+          <h2 className="text-4xl font-semibold mb-6">Still Need Help?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Our support team is here to help you succeed with Creation Rights.
           </p>

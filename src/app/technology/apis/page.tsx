@@ -396,7 +396,7 @@ export default function ApisPage() {
       {/* API-First Architecture */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">API-First Architecture</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">API-First Architecture</h2>
           <div className="space-y-8">
             {apiFirstFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -411,7 +411,7 @@ export default function ApisPage() {
       {/* Core API Services */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Core API Services</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Core API Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {coreApiServices.map((service, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -437,7 +437,7 @@ export default function ApisPage() {
       {/* Integration Capabilities */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Integration Capabilities</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Integration Capabilities</h2>
           <div className="space-y-12">
             {integrationCapabilities.map((capability, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -466,7 +466,7 @@ export default function ApisPage() {
       {/* Real-Time Features */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Real-Time Features</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Real-Time Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {realTimeFeatures.map((feature, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -493,7 +493,7 @@ export default function ApisPage() {
       {/* Advanced API Features */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Advanced API Features</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Advanced API Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {advancedFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -520,7 +520,7 @@ export default function ApisPage() {
       {/* Developer Resources */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Developer Resources</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Developer Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {developerResources.map((resource, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -543,7 +543,7 @@ export default function ApisPage() {
       {/* Performance & Reliability */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Performance & Reliability</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Performance & Reliability</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {performanceReliability.map((perf, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -569,12 +569,12 @@ export default function ApisPage() {
       {/* Pricing & Plans */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Pricing & Plans</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Pricing & Plans</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className="bg-background border border-border p-8">
                 <h3 className="text-2xl font-semibold mb-2">{plan.name}</h3>
-                <div className="text-3xl font-bold mb-4 text-primary">{plan.price}</div>
+                <div className="text-3xl font-semibold mb-4 text-primary">{plan.price}</div>
                 <p className="text-muted-foreground mb-6">{plan.description}</p>
                 <ul className="space-y-3">
                   {plan.features.map((feature, idx) => (
@@ -596,7 +596,7 @@ export default function ApisPage() {
       {/* Use Case Examples */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Use Case Examples</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Use Case Examples</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {useCaseExamples.map((useCase, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -614,7 +614,7 @@ export default function ApisPage() {
       {/* Getting Started */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Getting Started</h2>
+          <h2 className="text-4xl font-semibold mb-6">Getting Started</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
                 <div>
@@ -683,7 +683,7 @@ export default function ApisPage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-muted/20 border border-border p-8">

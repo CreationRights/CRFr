@@ -395,23 +395,24 @@ export default function LegalPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <PageHeader
-        title="Legal & Insurance"
-        subtitle="Comprehensive protection for the creator economy"
-      />
-      
-      <PageSection>
-        <div className="text-center max-w-4xl mx-auto">
-          <p className="text-xl text-muted-foreground mb-12">
+      <section className="px-6 py-24 sm:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto text-left">
+          <h1 className="mb-2 text-4xl font-semibold md:text-6xl">
+            Legal & Insurance
+          </h1>
+          <p className="text-4xl font-semibold text-muted-foreground max-w-3xl md:text-6xl mb-8">
+            Comprehensive protection for the creator economy
+          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl">
             Navigate the complex world of digital rights with confidence. Creation Rights provides legal infrastructure and innovative insurance products that protect your creative work and business in the AI era.
           </p>
         </div>
-      </PageSection>
+      </section>
 
       {/* Legal Infrastructure */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Legal Infrastructure for Digital Rights</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Legal Infrastructure for Digital Rights</h2>
           <div className="space-y-8">
             {legalInfrastructure.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -425,8 +426,8 @@ export default function LegalPage() {
 
       {/* Legal Services */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Comprehensive Legal Services</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Comprehensive Legal Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {legalServices.map((service, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -451,8 +452,8 @@ export default function LegalPage() {
 
       {/* Lloyd's Lab Insurance */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">Lloyd&apos;s Lab Insurance Innovation</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-4 text-center">Lloyd&apos;s Lab Insurance Innovation</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-4xl mx-auto">
             World-first insurance products designed specifically for the creator economy, developed in partnership with Lloyd&apos;s Lab - the innovation hub of the world&apos;s leading insurance marketplace.
           </p>
@@ -491,8 +492,8 @@ export default function LegalPage() {
 
       {/* Legal Technology Integration */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Legal Technology Integration</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Legal Technology Integration</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {technologyIntegration.map((tech, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -517,8 +518,8 @@ export default function LegalPage() {
 
       {/* Legal Support Services */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Legal Support Services</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Legal Support Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {supportServices.map((service, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -543,8 +544,8 @@ export default function LegalPage() {
 
       {/* Insurance Coverage Details */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Insurance Coverage Details</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Insurance Coverage Details</h2>
           
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-8 text-center">Coverage Limits & Pricing</h3>
@@ -556,7 +557,7 @@ export default function LegalPage() {
                     {category.plans.map((plan, idx) => (
                       <div key={idx} className="flex justify-between items-center p-4 bg-muted/20 border border-border">
                         <div>
-                          <div className="font-medium">{plan.name}</div>
+                          <div className="font-semibold">{plan.name}</div>
                           <div className="text-sm text-muted-foreground">{plan.coverage}</div>
                         </div>
                         <div className="font-semibold">{plan.price}</div>
@@ -589,7 +590,7 @@ export default function LegalPage() {
                   <div className="bg-primary text-primary-foreground w-8 h-8 flex items-center justify-center text-sm font-semibold mx-auto mb-3">
                     {index + 1}
                   </div>
-                  <h5 className="font-medium mb-2">{step.step}</h5>
+                  <h5 className="font-semibold mb-2">{step.step}</h5>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
@@ -600,8 +601,8 @@ export default function LegalPage() {
 
       {/* Legal Resources */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Legal Resources & Education</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Legal Resources & Education</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {legalResources.map((resource, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -623,8 +624,8 @@ export default function LegalPage() {
 
       {/* Partnership Network */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Partnership Network</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Partnership Network</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {partnershipNetwork.map((network, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -644,7 +645,7 @@ export default function LegalPage() {
       {/* Getting Started */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Getting Started</h2>
+          <h2 className="text-4xl font-semibold mb-6">Getting Started</h2>
           <h3 className="text-2xl font-semibold mb-8">Legal & Insurance Assessment</h3>
           <p className="text-xl text-muted-foreground mb-8">
             Personalized protection planning for your creative business:
@@ -676,7 +677,7 @@ export default function LegalPage() {
       {/* FAQ */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-background border border-border p-8">

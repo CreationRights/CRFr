@@ -364,7 +364,7 @@ export default function ContentIdPage() {
       {/* Beyond Platform-Specific Detection */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Beyond Platform-Specific Detection</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Beyond Platform-Specific Detection</h2>
           <div className="space-y-8">
             {beyondPlatformFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -379,7 +379,7 @@ export default function ContentIdPage() {
       {/* How Content ID Works */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">How Content ID Works</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">How Content ID Works</h2>
           <div className="space-y-12">
             {howItWorks.map((section, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -407,7 +407,7 @@ export default function ContentIdPage() {
       {/* Advanced Fingerprinting Technology */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Advanced Fingerprinting Technology</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Advanced Fingerprinting Technology</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {advancedFingerprinting.map((tech, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -435,7 +435,7 @@ export default function ContentIdPage() {
       {/* Universal Recognition Network */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Universal Recognition Network</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Universal Recognition Network</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {universalRecognition.map((network, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -458,7 +458,7 @@ export default function ContentIdPage() {
       {/* Intelligent Matching Engine */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Intelligent Matching Engine</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Intelligent Matching Engine</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {intelligentMatching.map((matching, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -484,7 +484,7 @@ export default function ContentIdPage() {
       {/* Rights Enforcement Integration */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Rights Enforcement Integration</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Rights Enforcement Integration</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {rightsEnforcement.map((enforcement, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -510,7 +510,7 @@ export default function ContentIdPage() {
       {/* Performance & Scale */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Performance & Scale</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Performance & Scale</h2>
           
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-8 text-center">Enterprise Architecture</h3>
@@ -518,7 +518,7 @@ export default function ContentIdPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {performanceMetrics.map((metric, index) => (
                 <div key={index} className="bg-muted/20 border border-border p-6 text-center">
-                  <div className="text-xl font-bold mb-2 text-primary">{metric.metric}</div>
+                  <div className="text-xl font-semibold mb-2 text-primary">{metric.metric}</div>
                   <p className="text-muted-foreground text-sm">{metric.description}</p>
                 </div>
               ))}
@@ -578,7 +578,7 @@ export default function ContentIdPage() {
       {/* Privacy & Security */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Privacy & Security</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Privacy & Security</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {privacySecurity.map((security, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -627,7 +627,7 @@ export default function ContentIdPage() {
       {/* Integration Examples */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Integration Examples</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Integration Examples</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {integrationExamples.map((example, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -648,7 +648,7 @@ export default function ContentIdPage() {
       {/* Analytics & Insights */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Analytics & Insights</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Analytics & Insights</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {analyticsInsights.map((insight, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -674,7 +674,7 @@ export default function ContentIdPage() {
       {/* Get Started */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Get Started with Content ID</h2>
+          <h2 className="text-4xl font-semibold mb-6">Get Started with Content ID</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div>
@@ -738,7 +738,7 @@ export default function ContentIdPage() {
       {/* FAQ */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-background border border-border p-8">

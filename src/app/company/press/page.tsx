@@ -61,7 +61,7 @@ export default function PressPage() {
       <PageSection>
         {/* Press Releases */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold  mb-8">Press Releases</h2>
+          <h2 className="text-3xl font-semibold  mb-8">Press Releases</h2>
           <div className="space-y-6">
             {pressReleases.map((release, index) => (
               <div
@@ -86,7 +86,7 @@ export default function PressPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Media Kit */}
           <div>
-            <h2 className="text-3xl font-bold  mb-8">Media Kit</h2>
+            <h2 className="text-3xl font-semibold  mb-8">Media Kit</h2>
             <div className="space-y-4">
               {mediaKit.map((item, index) => (
                 <div
@@ -107,7 +107,7 @@ export default function PressPage() {
 
           {/* Media Coverage */}
           <div>
-            <h2 className="text-3xl font-bold  mb-8">Media Coverage</h2>
+            <h2 className="text-3xl font-semibold  mb-8">Media Coverage</h2>
             <div className="space-y-4">
               {coverage.map((article, index) => (
                 <div
@@ -127,7 +127,7 @@ export default function PressPage() {
       </PageSection>
 
       <PageSection className="text-center">
-        <h2 className="mb-6 text-3xl font-bold  md:text-4xl">
+        <h2 className="mb-6 text-3xl font-semibold  md:text-4xl">
           Media Inquiries
         </h2>
         <p className="mb-10 text-lg text-muted-foreground max-w-2xl mx-auto">

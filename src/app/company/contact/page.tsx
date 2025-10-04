@@ -62,7 +62,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold  mb-6">Send us a message</h2>
+              <h2 className="text-3xl font-semibold  mb-6">Send us a message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
@@ -114,7 +114,7 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div>
-              <h2 className="text-3xl font-bold  mb-6">Get in touch</h2>
+              <h2 className="text-3xl font-semibold  mb-6">Get in touch</h2>
               <div className="space-y-6">
                 {departments.map((dept, index) => (
                   <div
@@ -138,7 +138,7 @@ export default function ContactPage() {
 
         {/* Offices */}
         <div>
-          <h2 className="text-3xl font-bold  text-center mb-12">Our Offices</h2>
+          <h2 className="text-3xl font-semibold  text-center mb-12">Our Offices</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {offices.map((office, index) => (
               <div

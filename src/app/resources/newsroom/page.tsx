@@ -65,7 +65,7 @@ export default function NewsroomPage() {
                 <span>{item.date}</span>
               </div>
             </div>
-            <h2 className="mb-4 text-3xl font-bold ">{item.title}</h2>
+            <h2 className="mb-4 text-3xl font-semibold ">{item.title}</h2>
             <p className=" text-lg mb-6">{item.excerpt}</p>
             <button className="flex items-center space-x-2 text-foreground hover:text-muted-foreground transition-colors">
               <span>Read Full Story</span>

@@ -375,7 +375,7 @@ export default function LicensingPage() {
       {/* Beyond Static Legal Documents */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Beyond Static Legal Documents</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Beyond Static Legal Documents</h2>
           <div className="space-y-8">
             {beyondStaticFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -390,7 +390,7 @@ export default function LicensingPage() {
       {/* How Smart Licensing Works */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">How Smart Licensing Works</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">How Smart Licensing Works</h2>
           <div className="space-y-12">
             {howItWorks.map((section, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -418,7 +418,7 @@ export default function LicensingPage() {
       {/* Licensing Intelligence Engine */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Licensing Intelligence Engine</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Licensing Intelligence Engine</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {licensingIntelligence.map((intelligence, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -446,7 +446,7 @@ export default function LicensingPage() {
       {/* Automated License Types */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Automated License Types</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Automated License Types</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {automatedLicenseTypes.map((licenseType, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -469,7 +469,7 @@ export default function LicensingPage() {
       {/* Real-Time License Execution */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Real-Time License Execution</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Real-Time License Execution</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {realTimeExecution.map((execution, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -495,7 +495,7 @@ export default function LicensingPage() {
       {/* Advanced Licensing Strategies */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Advanced Licensing Strategies</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Advanced Licensing Strategies</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {advancedStrategies.map((strategy, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -521,7 +521,7 @@ export default function LicensingPage() {
       {/* Integration Capabilities */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Integration Capabilities</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Integration Capabilities</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {integrationCapabilities.map((integration, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -544,7 +544,7 @@ export default function LicensingPage() {
       {/* Licensing Analytics & Optimization */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Licensing Analytics & Optimization</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Licensing Analytics & Optimization</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {licensingAnalytics.map((analytics, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -570,7 +570,7 @@ export default function LicensingPage() {
       {/* Legal Compliance & Protection */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Legal Compliance & Protection</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Legal Compliance & Protection</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {legalCompliance.map((compliance, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -596,7 +596,7 @@ export default function LicensingPage() {
       {/* Get Started */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Get Started with Smart Licensing</h2>
+          <h2 className="text-4xl font-semibold mb-6">Get Started with Smart Licensing</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div>
@@ -660,7 +660,7 @@ export default function LicensingPage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-muted/20 border border-border p-8">

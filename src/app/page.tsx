@@ -60,7 +60,7 @@ export default function Home() {
                   <p className="text-sm leading-relaxed max-w-3xl md:text-base opacity-90">
                     Powered by patented dynamic metadata that travels with your content across the internet
                   </p>
-                  <h1 className="text-5xl font-bold leading-tight uppercase md:text-7xl lg:text-8xl">
+                  <h1 className="text-5xl font-semibold leading-tight uppercase md:text-7xl lg:text-8xl">
                     Your&nbsp;Art. Your&nbsp;Rights. Your&nbsp;Revenue.
                   </h1>
           </HeroContent>
@@ -70,7 +70,7 @@ export default function Home() {
       {/* Problem Statement */}
       <section className="px-6 py-24 sm:px-16 lg:px-24 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 md:text-5xl">
+          <h2 className="text-4xl font-semibold mb-6 md:text-5xl">
             The Creator Economy Is Broken. We&rsquo;re Fixing It.
           </h2>
           <p className="text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -89,7 +89,7 @@ export default function Home() {
       <section className="px-6 py-24 sm:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 md:text-5xl">
+            <h2 className="text-4xl font-semibold mb-6 md:text-5xl">
               What If Your Content Could Protect and Pay You Automatically?
             </h2>
             <p className="text-xl mb-12 max-w-3xl mx-auto">
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-2xl font-bold">
+            <p className="text-2xl font-semibold">
               This isn&rsquo;t the future. It&rsquo;s available today.
             </p>
           </div>
@@ -151,7 +151,7 @@ export default function Home() {
       <section className="px-6 py-24 sm:px-16 lg:px-24 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 md:text-5xl">
+            <h2 className="text-4xl font-semibold mb-6 md:text-5xl">
               Take Your Power Back
             </h2>
           </div>
@@ -159,7 +159,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Broken System */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-8">Instead of this broken system:</h3>
+              <h3 className="text-2xl font-semibold mb-8">Instead of this broken system:</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4 p-4 border border-border bg-card">
                   <X className="h-5 w-5 mt-1 flex-shrink-0" />
@@ -186,7 +186,7 @@ export default function Home() {
             
             {/* Creator-First Experience */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-8">Get this creator-first experience:</h3>
+              <h3 className="text-2xl font-semibold mb-8">Get this creator-first experience:</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4 p-4 border border-border bg-card">
                   <Check className="h-5 w-5 mt-1 flex-shrink-0" />
@@ -218,7 +218,7 @@ export default function Home() {
       <section className="px-6 py-24 sm:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 md:text-5xl">
+            <h2 className="text-4xl font-semibold mb-6 md:text-5xl">
               Built for the AI Era
             </h2>
             <p className="text-xl leading-relaxed mb-8 max-w-4xl mx-auto">
@@ -236,7 +236,7 @@ export default function Home() {
             <div className="flex items-start space-x-4 p-8 border border-border bg-card ">
               <Zap className="h-8 w-8 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-bold text-lg mb-2">Lightning-fast processing</h3>
+                <h3 className="font-semibold text-lg mb-2">Lightning-fast processing</h3>
                 <p className="text-sm">that makes legacy systems look prehistoric</p>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function Home() {
             <div className="flex items-start space-x-4 p-8 border border-border bg-card ">
               <Eye className="h-8 w-8 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-bold text-lg mb-2">Real-time tracking</h3>
+                <h3 className="font-semibold text-lg mb-2">Real-time tracking</h3>
                 <p className="text-sm">of every remix and derivative across all platforms</p>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
             <div className="flex items-start space-x-4 p-8 border border-border bg-card ">
               <Bot className="h-8 w-8 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-bold text-lg mb-2">AI-readable licensing</h3>
+                <h3 className="font-semibold text-lg mb-2">AI-readable licensing</h3>
                 <p className="text-sm">that enables automatic discovery and negotiation</p>
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function Home() {
             <div className="flex items-start space-x-4 p-8 border border-border bg-card ">
               <DollarSign className="h-8 w-8 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-bold text-lg mb-2">Instant revenue distribution</h3>
+                <h3 className="font-semibold text-lg mb-2">Instant revenue distribution</h3>
                 <p className="text-sm">based on your preset collaboration rules</p>
               </div>
             </div>
@@ -271,7 +271,7 @@ export default function Home() {
       {/* Trust Section */}
       <section className="px-6 py-24 sm:px-16 lg:px-24 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 md:text-5xl">
+          <h2 className="text-4xl font-semibold mb-8 md:text-5xl">
             Trusted by the Industry
           </h2>
           <div className="space-y-6 text-lg">
@@ -286,7 +286,7 @@ export default function Home() {
       <section className="px-6 py-24 sm:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 md:text-5xl">
+            <h2 className="text-4xl font-semibold mb-6 md:text-5xl">
               See It Work With Your Own Content
             </h2>
             <p className="text-xl mb-12 max-w-3xl mx-auto">
@@ -346,7 +346,7 @@ export default function Home() {
       <section className="px-6 py-24 sm:px-16 lg:px-24 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 md:text-5xl">
+            <h2 className="text-4xl font-semibold mb-6 md:text-5xl">
               Any Creative Ready to Take Control
             </h2>
             <p className="text-xl mb-12 max-w-3xl mx-auto">
@@ -357,31 +357,31 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="p-8 border border-border bg-card ">
               <Palette className="h-12 w-12 mb-4" />
-              <h3 className="font-bold text-lg mb-2">Digital Artist</h3>
+              <h3 className="font-semibold text-lg mb-2">Digital Artist</h3>
               <p className="text-sm">whose style is perfect for AI training</p>
             </div>
             
             <div className="p-8 border border-border bg-card ">
               <Music className="h-12 w-12 mb-4" />
-              <h3 className="font-bold text-lg mb-2">Music Producer</h3>
+              <h3 className="font-semibold text-lg mb-2">Music Producer</h3>
               <p className="text-sm">creating beats that get heavily remixed</p>
             </div>
             
             <div className="p-8 border border-border bg-card ">
               <Camera className="h-12 w-12 mb-4" />
-              <h3 className="font-bold text-lg mb-2">Photographer</h3>
+              <h3 className="font-semibold text-lg mb-2">Photographer</h3>
               <p className="text-sm">with distinctive visual signatures</p>
             </div>
             
             <div className="p-8 border border-border bg-card ">
               <Video className="h-12 w-12 mb-4" />
-              <h3 className="font-bold text-lg mb-2">Content Creator</h3>
+              <h3 className="font-semibold text-lg mb-2">Content Creator</h3>
               <p className="text-sm">spawning viral derivatives</p>
             </div>
             
             <div className="p-8 border border-border bg-card ">
               <Briefcase className="h-12 w-12 mb-4" />
-              <h3 className="font-bold text-lg mb-2">Creative Agency</h3>
+              <h3 className="font-semibold text-lg mb-2">Creative Agency</h3>
               <p className="text-sm">managing multiple client assets</p>
             </div>
           </div>
@@ -397,7 +397,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="px-6 py-24 sm:px-16 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 md:text-5xl">
+          <h2 className="text-4xl font-semibold mb-8 md:text-5xl">
             The Creator-First Internet Starts Here
           </h2>
           <div className="space-y-6 text-lg mb-12">

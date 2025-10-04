@@ -248,26 +248,27 @@ export default function DevelopersPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <PageHeader
-        title="For Developers"
-        subtitle="Build the creator-first internet with rights-native infrastructure"
-      />
-      
-      <PageSection>
-        <div className="text-center max-w-4xl mx-auto">
-          <p className="text-xl text-muted-foreground mb-12">
+      <section className="px-6 py-24 sm:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto text-left">
+          <h1 className="mb-2 text-4xl font-semibold md:text-6xl">
+            For Developers
+          </h1>
+          <p className="text-4xl font-semibold text-muted-foreground max-w-3xl md:text-6xl mb-8">
+            Build the creator-first internet with rights-native infrastructure
+          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl">
             Stop building on broken foundations. Creation Rights provides the first programmable rights layer for the internet - giving you the APIs, SDKs, and infrastructure to build applications that respect creators from the ground up.
           </p>
         </div>
-      </PageSection>
+      </section>
 
       {/* Rights Layer */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">The Rights Layer the Internet Always Needed</h2>
-          <div className="space-y-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-left">The Rights Layer the Internet Always Needed</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rightsLayerFeatures.map((feature, index) => (
-              <div key={index} className="bg-muted/20 p-8 border border-border">
+              <div key={index} className="bg-muted/50 p-8">
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>
@@ -278,8 +279,8 @@ export default function DevelopersPage() {
 
       {/* Developer Architecture */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Developer-First Architecture</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Developer-First Architecture</h2>
           
           {/* API Code Example */}
           <div className="mb-12 bg-background border border-border p-8">
@@ -337,8 +338,8 @@ if (rights.permitted) {
 
       {/* Rights-Aware Applications */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Build Rights-Aware Applications</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Build Rights-Aware Applications</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {applicationTypes.map((app, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -363,8 +364,8 @@ if (rights.permitted) {
 
       {/* SDKs & Integration */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">SDKs & Integration Tools</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">SDKs & Integration Tools</h2>
           
           {/* JavaScript SDK */}
           <div className="mb-8 bg-background border border-border p-8">
@@ -452,8 +453,8 @@ func main() {
 
       {/* Advanced Features */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Advanced Features for Power Users</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Advanced Features for Power Users</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {advancedFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -478,8 +479,8 @@ func main() {
 
       {/* Real-World Use Cases */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Real-World Use Cases</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Real-World Use Cases</h2>
           
           <div className="space-y-8">
             {/* CMS Plugin */}
@@ -548,8 +549,8 @@ if (canStream.permitted) {
 
       {/* Developer Resources */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Developer Resources</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Developer Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {developerResources.map((resource, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -570,8 +571,8 @@ if (canStream.permitted) {
 
       {/* Technical Specifications */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Technical Specifications</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Technical Specifications</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {technicalSpecs.map((spec, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -596,7 +597,7 @@ if (canStream.permitted) {
       {/* Get Started Building */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6 text-center">Get Started Building</h2>
+          <h2 className="text-4xl font-semibold mb-6 text-center">Get Started Building</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -648,8 +649,8 @@ if (canStream.permitted) {
 
       {/* Open Source Contributions */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Open Source Contributions</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Open Source Contributions</h2>
           <div className="text-center mb-8">
             <p className="text-xl text-muted-foreground mb-8">
               We believe in building together. Contribute to our open-source tools:
@@ -677,7 +678,7 @@ if (canStream.permitted) {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-muted/20 border border-border p-8">

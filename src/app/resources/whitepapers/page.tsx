@@ -91,7 +91,7 @@ export default function WhitepapersPage() {
       </PageSection>
 
       <PageSection className="text-center">
-        <h2 className="mb-6 text-3xl font-bold  md:text-4xl">
+        <h2 className="mb-6 text-3xl font-semibold  md:text-4xl">
           Stay Informed
         </h2>
         <p className="mb-10 text-lg text-muted-foreground max-w-2xl mx-auto">

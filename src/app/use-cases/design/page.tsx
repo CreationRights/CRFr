@@ -284,7 +284,7 @@ export default function DesignPage() {
       {/* The Design Industry's Rights Crisis */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">The Design Industry&apos;s Rights Crisis</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">The Design Industry&apos;s Rights Crisis</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {challenges.map((challenge, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -308,7 +308,7 @@ export default function DesignPage() {
       {/* How Creation Rights Transforms Design Protection */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">How Creation Rights Transforms Design Protection</h2>
+          <h2 className="text-4xl font-semibold mb-4 text-center">How Creation Rights Transforms Design Protection</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -332,7 +332,7 @@ export default function DesignPage() {
       {/* The Provenance Graph */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">The Provenance Graph</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">The Provenance Graph</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
             Our comprehensive provenance system captures the complexity of design creation, from initial concept to final implementation with complete technical and collaborative documentation.
           </p>
@@ -351,7 +351,7 @@ export default function DesignPage() {
       {/* Advanced Features */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Advanced Features for Design</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Advanced Features for Design</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="p-6 border border-border bg-background">
@@ -367,7 +367,7 @@ export default function DesignPage() {
       {/* Design Industry Integration */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Design Industry Integration</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Design Industry Integration</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {advancedFeatures.map((category, index) => (
               <div key={index} className="bg-card border border-border p-8">
@@ -391,7 +391,7 @@ export default function DesignPage() {
       {/* Before / After */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Before / After Creation Rights</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Before / After Creation Rights</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {beforeAfter.map((section, index) => (
               <div key={index} className="space-y-6">
@@ -417,7 +417,7 @@ export default function DesignPage() {
       {/* Success Stories */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Design Industry Success Stories</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Design Industry Success Stories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <div key={index} className="bg-card border border-border p-8">
@@ -446,7 +446,7 @@ export default function DesignPage() {
       {/* Demo CTA */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Design Career?</h2>
+          <h2 className="text-4xl font-semibold mb-6">Ready to Transform Your Design Career?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Join thousands of designers who have protected their creative work, automated their rights management, and built sustainable design businesses through comprehensive design protection that preserves artistic integrity while ensuring fair compensation and collaboration.
           </p>
@@ -464,7 +464,7 @@ export default function DesignPage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-border pb-6">

@@ -345,7 +345,7 @@ export default function NilPage() {
       {/* Your Identity, Your Asset */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Your Identity, Your Asset</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Your Identity, Your Asset</h2>
           <div className="space-y-8">
             {identityAssetFeatures.map((feature, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -360,7 +360,7 @@ export default function NilPage() {
       {/* Comprehensive Identity Protection */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Comprehensive Identity Protection</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Comprehensive Identity Protection</h2>
           <div className="space-y-12">
             {comprehensiveProtection.map((section, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -388,7 +388,7 @@ export default function NilPage() {
       {/* AI-Era Identity Rights */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">AI-Era Identity Rights</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">AI-Era Identity Rights</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {aiEraRights.map((right, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -414,7 +414,7 @@ export default function NilPage() {
       {/* Identity Monetization */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Identity Monetization</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Identity Monetization</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {identityMonetization.map((monetization, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -437,7 +437,7 @@ export default function NilPage() {
       {/* Biometric Identity Verification */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Biometric Identity Verification</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Biometric Identity Verification</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {biometricVerification.map((verification, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -463,7 +463,7 @@ export default function NilPage() {
       {/* Legal Framework & Enforcement */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Legal Framework & Enforcement</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Legal Framework & Enforcement</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {legalFramework.map((framework, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -489,7 +489,7 @@ export default function NilPage() {
       {/* Platform Integration */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Platform Integration</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Platform Integration</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {platformIntegration.map((integration, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -512,7 +512,7 @@ export default function NilPage() {
       {/* NIL Analytics & Insights */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">NIL Analytics & Insights</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">NIL Analytics & Insights</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {nilAnalytics.map((analytics, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -538,7 +538,7 @@ export default function NilPage() {
       {/* Get Started */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Get Started with NIL Protection</h2>
+          <h2 className="text-4xl font-semibold mb-6">Get Started with NIL Protection</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div>
@@ -602,7 +602,7 @@ export default function NilPage() {
       {/* FAQ */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-background border border-border p-8">

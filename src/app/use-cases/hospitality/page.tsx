@@ -283,7 +283,7 @@ export default function HospitalityPage() {
       {/* The Hospitality Brand Challenge */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">The Hospitality Brand Challenge</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">The Hospitality Brand Challenge</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {challenges.map((challenge, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border">
@@ -307,7 +307,7 @@ export default function HospitalityPage() {
       {/* How Creation Rights Transforms Hospitality Protection */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">How Creation Rights Transforms Hospitality Protection</h2>
+          <h2 className="text-4xl font-semibold mb-4 text-center">How Creation Rights Transforms Hospitality Protection</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -331,7 +331,7 @@ export default function HospitalityPage() {
       {/* The Provenance Graph */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">The Provenance Graph</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">The Provenance Graph</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
             Our comprehensive provenance system captures the complexity of hospitality brand development, from concept creation to cultural integration and guest experience innovation.
           </p>
@@ -350,7 +350,7 @@ export default function HospitalityPage() {
       {/* Advanced Features */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Advanced Features for Hospitality</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Advanced Features for Hospitality</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="p-6 border border-border bg-background">
@@ -366,7 +366,7 @@ export default function HospitalityPage() {
       {/* Hospitality Industry Integration */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Hospitality Industry Integration</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Hospitality Industry Integration</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {advancedFeatures.map((category, index) => (
               <div key={index} className="bg-card border border-border p-8">
@@ -390,7 +390,7 @@ export default function HospitalityPage() {
       {/* Before / After */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Before / After Creation Rights</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Before / After Creation Rights</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {beforeAfter.map((section, index) => (
               <div key={index} className="space-y-6">
@@ -416,7 +416,7 @@ export default function HospitalityPage() {
       {/* Success Stories */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Hospitality Success Stories</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Hospitality Success Stories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <div key={index} className="bg-card border border-border p-8">
@@ -445,7 +445,7 @@ export default function HospitalityPage() {
       {/* Demo CTA */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Hospitality Brand?</h2>
+          <h2 className="text-4xl font-semibold mb-6">Ready to Transform Your Hospitality Brand?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Join leading hospitality brands who have protected their unique experiences, automated their content licensing, and built sustainable competitive advantages through comprehensive brand protection that preserves authenticity while enabling legitimate partnerships.
           </p>
@@ -463,7 +463,7 @@ export default function HospitalityPage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-border pb-6">

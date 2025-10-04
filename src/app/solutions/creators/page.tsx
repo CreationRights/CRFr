@@ -142,23 +142,24 @@ export default function CreatorsPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <PageHeader
-        title="For Creators"
-        subtitle="Turn your creative work into a revenue generating empire"
-      />
-      
-      <PageSection>
-        <div className="text-center max-w-4xl mx-auto">
-          <p className="text-xl text-muted-foreground mb-12">
+      <section className="px-6 py-24 sm:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto text-left">
+          <h1 className="mb-2 text-4xl font-semibold md:text-6xl">
+            For Creators
+          </h1>
+          <p className="text-4xl font-semibold text-muted-foreground max-w-3xl md:text-6xl mb-8">
+            Turn your creative work into a revenue generating empire
+          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl">
             Stop letting platforms and intermediaries profit from your talent while you wait months for unclear payments. Creation Rights puts you back in control.
           </p>
         </div>
-      </PageSection>
+      </section>
 
       {/* Your Creative Work, Your Rules */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Your Creative Work, Your Rules</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Your Creative Work, Your Rules</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Set your own terms. Choose from flexible licensing options - from All Rights Reserved to Creative Commons to custom commercial terms. You decide what your work is worth, not some platform algorithm.</h3>
@@ -185,8 +186,8 @@ export default function CreatorsPage() {
 
       {/* Revenue Streams */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">Unlock Revenue Streams You Never Knew Existed</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-4 text-center">Unlock Revenue Streams You Never Knew Existed</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             {revenueStreams.map((stream, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -203,8 +204,8 @@ export default function CreatorsPage() {
 
       {/* Workflow Integration */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Works With Your Existing Workflow</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Works With Your Existing Workflow</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-muted/20 p-8 mb-6">
@@ -230,8 +231,8 @@ export default function CreatorsPage() {
 
       {/* Dashboard Features */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Real-Time Control Dashboard</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Real-Time Control Dashboard</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {dashboardFeatures.map((feature, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -255,8 +256,8 @@ export default function CreatorsPage() {
 
       {/* Before / After */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Before / After CR</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Before / After CR</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-semibold mb-8 text-center">Before Creation Rights:</h3>
@@ -286,8 +287,8 @@ export default function CreatorsPage() {
 
       {/* Success Stories */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Success Stories</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-12 text-center">Success Stories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-background border border-border p-8">
@@ -308,8 +309,8 @@ export default function CreatorsPage() {
 
       {/* Security */}
       <PageSection>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">Enterprise-Grade Security for Your Valuable IP</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-4 text-center">Enterprise-Grade Security for Your Valuable IP</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             {securityFeatures.map((feature, index) => (
               <div key={index} className="flex items-center space-x-4 p-6 bg-muted/20">
@@ -323,8 +324,8 @@ export default function CreatorsPage() {
 
       {/* Pricing */}
       <PageSection className="bg-muted/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">Pricing That Pays for Itself</h2>
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-semibold mb-4">Pricing That Pays for Itself</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             <div className="bg-background border border-border p-6">
               <h3 className="font-semibold mb-2">Start Free</h3>
@@ -348,8 +349,8 @@ export default function CreatorsPage() {
 
       {/* Demo CTA */}
       <PageSection>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Take Control?</h2>
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-semibold mb-6">Ready to Take Control?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Book a 30-minute demo where we&apos;ll upload one of your actual files and show you:
           </p>
@@ -385,7 +386,7 @@ export default function CreatorsPage() {
       {/* FAQ */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-background border border-border p-8">

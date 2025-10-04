@@ -305,7 +305,7 @@ export default function AboutPage() {
       {/* Mission Statement */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Target className="h-8 w-8 mr-3 text-primary" />
             Our Mission
           </h2>
@@ -326,7 +326,7 @@ export default function AboutPage() {
       {/* Company Values */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Company Values</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Company Values</h2>
           <div className="space-y-12">
             {companyValues.map((value, index) => (
               <div key={index} className="bg-muted/20 p-8 border border-border rounded-lg">
@@ -357,7 +357,7 @@ export default function AboutPage() {
       {/* Origin Story */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Heart className="h-8 w-8 mr-3 text-primary" />
             Origin Story
           </h2>
@@ -383,7 +383,7 @@ export default function AboutPage() {
       {/* Leadership & Team */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Users className="h-8 w-8 mr-3 text-primary" />
             Leadership & Team
           </h2>
@@ -423,7 +423,7 @@ export default function AboutPage() {
       {/* Technology & Innovation */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Code2 className="h-8 w-8 mr-3 text-primary" />
             Technology & Innovation
           </h2>
@@ -457,7 +457,7 @@ export default function AboutPage() {
       {/* Industry Impact & Recognition */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Award className="h-8 w-8 mr-3 text-primary" />
             Industry Impact & Recognition
           </h2>
@@ -487,7 +487,7 @@ export default function AboutPage() {
       {/* The Future We're Building */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Rocket className="h-8 w-8 mr-3 text-primary" />
             The Future We&apos;re Building
           </h2>
@@ -521,7 +521,7 @@ export default function AboutPage() {
       {/* Join Our Mission */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Heart className="h-8 w-8 mr-3 text-primary" />
             Join Our Mission
           </h2>
@@ -544,7 +544,7 @@ export default function AboutPage() {
       {/* Closing Statement */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Story Continues</h2>
+          <h2 className="text-3xl font-semibold mb-6">Our Story Continues</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Today, Creation Rights stands as a testament to the power of collaboration and commitment. We are proud to have assembled a team of dedicated individuals who share a deep passion for protecting and empowering creators. Our story is far from over – we will continue to innovate, advocate, and fight for the rights of creators worldwide.
           </p>
@@ -557,7 +557,7 @@ export default function AboutPage() {
       {/* CTA */}
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Mission?</h2>
+          <h2 className="text-4xl font-semibold mb-6">Ready to Join Our Mission?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Whether you&apos;re a creator, partner, investor, or advocate, there&apos;s a place for you in the creator-first future we&apos;re building.
           </p>

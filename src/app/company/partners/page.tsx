@@ -545,7 +545,7 @@ export default function PartnersPage() {
       {/* Partnership Ecosystem */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Users className="h-8 w-8 mr-3 text-primary" />
             Partnership Ecosystem
           </h2>
@@ -574,7 +574,7 @@ export default function PartnersPage() {
       {/* Technology Partners */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Code2 className="h-8 w-8 mr-3 text-primary" />
             Technology Partners
           </h2>
@@ -614,7 +614,7 @@ export default function PartnersPage() {
       {/* Financial Partners */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <DollarSign className="h-8 w-8 mr-3 text-primary" />
             Financial Partners
           </h2>
@@ -654,7 +654,7 @@ export default function PartnersPage() {
       {/* Legal & Insurance Partners */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Gavel className="h-8 w-8 mr-3 text-primary" />
             Legal & Insurance Partners
           </h2>
@@ -694,7 +694,7 @@ export default function PartnersPage() {
       {/* Creative Industry Partners */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Music className="h-8 w-8 mr-3 text-primary" />
             Creative Industry Partners
           </h2>
@@ -734,7 +734,7 @@ export default function PartnersPage() {
       {/* Academic & Research Partners */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <GraduationCap className="h-8 w-8 mr-3 text-primary" />
             Academic & Research Partners
           </h2>
@@ -774,7 +774,7 @@ export default function PartnersPage() {
       {/* Become a Partner */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Handshake className="h-8 w-8 mr-3 text-primary" />
             Become a Partner
           </h2>
@@ -829,7 +829,7 @@ export default function PartnersPage() {
       {/* Partner Resources */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <FileText className="h-8 w-8 mr-3 text-primary" />
             Partner Resources
           </h2>
@@ -859,7 +859,7 @@ export default function PartnersPage() {
       {/* Contact Partnership Team */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center">
+          <h2 className="text-4xl font-semibold mb-12 text-center flex items-center justify-center">
             <Mail className="h-8 w-8 mr-3 text-primary" />
             Contact Partnership Team
           </h2>
@@ -921,7 +921,7 @@ export default function PartnersPage() {
       {/* FAQ */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqItems.map((item, index) => (
               <div key={index} className="bg-muted/20 border border-border p-8 rounded-lg">

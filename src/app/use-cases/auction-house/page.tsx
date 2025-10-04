@@ -54,7 +54,7 @@ export default function AuctionHousePage() {
 
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Challenges for Auction Houses</h2>
+          <h2 className="text-3xl font-semibold mb-6">Challenges for Auction Houses</h2>
           <div className="space-y-6">
             {challenges.map((challenge, index) => (
               <div key={index} className="bg-muted/20 p-6 border border-border">
@@ -68,7 +68,7 @@ export default function AuctionHousePage() {
 
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Creation Rights Solutions for Auction Houses</h2>
+          <h2 className="text-3xl font-semibold mb-6">Creation Rights Solutions for Auction Houses</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-background border border-border p-6">
@@ -83,7 +83,7 @@ export default function AuctionHousePage() {
 
       <PageSection>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Key Benefits for Auction Houses</h2>
+          <h2 className="text-3xl font-semibold mb-6">Key Benefits for Auction Houses</h2>
           <ul className="space-y-3 text-left max-w-2xl mx-auto">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-start space-x-2">
@@ -96,7 +96,7 @@ export default function AuctionHousePage() {
       </PageSection>
 
       <PageSection className="bg-muted/20 text-center">
-        <h2 className="text-3xl font-bold mb-6">Ready to Enhance Your Auction House?</h2>
+        <h2 className="text-3xl font-semibold mb-6">Ready to Enhance Your Auction House?</h2>
         <p className="text-lg text-muted-foreground mb-8">
           Discover how Creation Rights can help auction houses build trust and streamline operations.
         </p>

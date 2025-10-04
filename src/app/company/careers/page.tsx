@@ -170,7 +170,7 @@ export default function CareersPage() {
       {/* Why Join Us */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Why Join Creation Rights?</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Why Join Creation Rights?</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {whyJoinUs.map((reason, index) => (
               <div key={index} className="bg-background border border-border p-8 rounded-lg">
@@ -196,7 +196,7 @@ export default function CareersPage() {
       {/* Benefits */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Benefits & Perks</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Benefits & Perks</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-muted/20 p-6 border border-border rounded-lg">
@@ -214,7 +214,7 @@ export default function CareersPage() {
       {/* Company Values */}
       <PageSection className="bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Our Values</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center">
@@ -232,7 +232,7 @@ export default function CareersPage() {
       {/* Open Positions */}
       <PageSection>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Open Positions</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Open Positions</h2>
           <div className="space-y-6">
             {openPositions.map((position, index) => (
               <div key={index} className="bg-muted/20 p-6 border border-border rounded-lg hover:bg-muted/30 transition-colors">
@@ -286,7 +286,7 @@ export default function CareersPage() {
       {/* Application Process */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Our Hiring Process</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center">Our Hiring Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-primary text-primary-foreground w-12 h-12 flex items-center justify-center text-lg font-semibold rounded-full mx-auto mb-4">1</div>
@@ -315,7 +315,7 @@ export default function CareersPage() {
       {/* CTA */}
       <PageSection className="bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Make an Impact?</h2>
+          <h2 className="text-4xl font-semibold mb-6">Ready to Make an Impact?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Join us in building the future of creator rights and digital protection.
           </p>
